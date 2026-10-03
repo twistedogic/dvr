@@ -1,0 +1,1354 @@
+{
+  "generated_at": "2026-10-03T16:44:58.274Z",
+  "channels": [
+    {
+      "id": "_QIfHvN9auy2CoOdSfMWDw",
+      "name": "Strange Loop Conference"
+    },
+    {
+      "id": "zoVCacndDCfGDf41P-z0iA",
+      "name": "JSConf"
+    },
+    {
+      "id": "x9QVEApa5BKLw9r8cnOFEA",
+      "name": "Gopher Academy"
+    },
+    {
+      "id": "0jzvznwtnsdXYIp415oC9g",
+      "name": "Rust Foundation"
+    },
+    {
+      "id": "_R1ioWBZZEcHS3vZlFd4BA",
+      "name": "two bangs"
+    },
+    {
+      "id": "MlGfpWw-RUdWX_JbLCukXg",
+      "name": "CppCon"
+    },
+    {
+      "id": "0l2QTnO1P2iph-86HHilMQ",
+      "name": "ElixirConf"
+    },
+    {
+      "id": "EtohQeDqMSebi2yvLMUItg",
+      "name": "LambdaConf"
+    },
+    {
+      "id": "-WICcSW1k3HsScuXxDrp0w",
+      "name": "Curry On!"
+    },
+    {
+      "id": "vqbFHwN-nwalWPjPUKpvTA",
+      "name": "CNCF [Cloud Native Computing Foundation]"
+    },
+    {
+      "id": "HwLg2XZDZL3OvrwpzleKjw",
+      "name": "USENIX"
+    },
+    {
+      "id": "6Om9kAkl32dWlDSNlDS9Iw",
+      "name": "DEFCONConference"
+    },
+    {
+      "id": "MEeDOfBauUM6-gDQn4b4Ig",
+      "name": "Software Should Work"
+    }
+  ],
+  "talks": [
+    {
+      "id": "OCYU0LtqRH0",
+      "title": "&quot;Birdsong as code&quot; by Chris Ford (Strange Loop 2023)",
+      "channel": "Strange Loop Conference",
+      "published": "2023-10-13T19:56:00+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/OCYU0LtqRH0/hqdefault.jpg"
+    },
+    {
+      "id": "n2yJ3FBtU4Y",
+      "title": "&quot;Software &amp; The Game of Go&quot; by David Nolen (Strange Loop 2023)",
+      "channel": "Strange Loop Conference",
+      "published": "2023-10-13T17:36:16+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/n2yJ3FBtU4Y/hqdefault.jpg"
+    },
+    {
+      "id": "NcUJnmBqHTY",
+      "title": "&quot;Cursorless: A spoken language for editing code&quot; by Pokey Rule (Strange Loop 2023)",
+      "channel": "Strange Loop Conference",
+      "published": "2023-10-13T16:55:23+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/NcUJnmBqHTY/hqdefault.jpg"
+    },
+    {
+      "id": "V9krYlzSgGk",
+      "title": "&quot;Using data-driven metrics to anticipate and prevent security incidents&quot; by Caitlin Buckshaw",
+      "channel": "Strange Loop Conference",
+      "published": "2023-10-13T13:31:01+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/V9krYlzSgGk/hqdefault.jpg"
+    },
+    {
+      "id": "nq5C82Nn7XM",
+      "title": "&quot;Oatmeal is Cheap: A Fundamental Theorem for Procedural Generators&quot; by Younès Rabii",
+      "channel": "Strange Loop Conference",
+      "published": "2023-10-13T13:28:05+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/nq5C82Nn7XM/hqdefault.jpg"
+    },
+    {
+      "id": "ZQc9-seU-5k",
+      "title": "&quot;Swift as C++ Successor in FoundationDB&quot; by Konrad Malawski (Strange Loop 2023)",
+      "channel": "Strange Loop Conference",
+      "published": "2023-10-12T20:58:24+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/ZQc9-seU-5k/hqdefault.jpg"
+    },
+    {
+      "id": "MQnVmEw6ISQ",
+      "title": "&quot;Supporting Data Journalism through Compilers for Visual Inputs&quot; by Parker Ziegler",
+      "channel": "Strange Loop Conference",
+      "published": "2023-10-12T17:23:20+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/MQnVmEw6ISQ/hqdefault.jpg"
+    },
+    {
+      "id": "Jv2JgzAl5yU",
+      "title": "&quot;Computational Physics, Beyond the Glass&quot; by Sam Ritchie (Strange Loop 2023)",
+      "channel": "Strange Loop Conference",
+      "published": "2023-10-12T17:18:23+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/Jv2JgzAl5yU/hqdefault.jpg"
+    },
+    {
+      "id": "Gx2mDuVAClo",
+      "title": "&quot;Is my Large Language Model a Strange Loop?&quot; by Zac Hatfield-Dodds (Strange Loop 2023)",
+      "channel": "Strange Loop Conference",
+      "published": "2023-10-12T13:53:39+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/Gx2mDuVAClo/hqdefault.jpg"
+    },
+    {
+      "id": "APNV_0I7nbs",
+      "title": "&quot;A JVM threading model for the containerized times&quot; by Luiz Hespanha and Flavio Brasil",
+      "channel": "Strange Loop Conference",
+      "published": "2023-10-12T13:39:55+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/APNV_0I7nbs/hqdefault.jpg"
+    },
+    {
+      "id": "T3u7bGgVspM",
+      "title": "&quot;An approach to computing and sustainability inspired from permaculture&quot; by Devine Lu Linvega",
+      "channel": "Strange Loop Conference",
+      "published": "2023-10-11T20:09:41+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/T3u7bGgVspM/hqdefault.jpg"
+    },
+    {
+      "id": "1cRFfYQYGxE",
+      "title": "&quot;From Geometry to Algebra and Back Again: 4000 Years of Papers&quot; by Jack Rusher",
+      "channel": "Strange Loop Conference",
+      "published": "2023-10-11T16:06:47+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/1cRFfYQYGxE/hqdefault.jpg"
+    },
+    {
+      "id": "4_6uboxUYR8",
+      "title": "&quot;War Time Proofs and Futuristic Programs&quot; by Valeria de Paiva",
+      "channel": "Strange Loop Conference",
+      "published": "2023-10-11T14:54:59+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/4_6uboxUYR8/hqdefault.jpg"
+    },
+    {
+      "id": "vBUa6mNdKOE",
+      "title": "&quot;Experimentation: putting research papers into prod&quot; by Leemay Nassery",
+      "channel": "Strange Loop Conference",
+      "published": "2023-10-11T14:47:04+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/vBUa6mNdKOE/hqdefault.jpg"
+    },
+    {
+      "id": "xOInz_gt2Fg",
+      "title": "&quot;Formal semantics for multi-language programs&quot; by Amal Ahmed",
+      "channel": "Strange Loop Conference",
+      "published": "2023-10-10T20:01:11+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/xOInz_gt2Fg/hqdefault.jpg"
+    },
+    {
+      "id": "6zMbLGe3lys",
+      "title": "🚀 JSConf México 2025: Live Stream Day 2 - Stage B",
+      "channel": "JSConf",
+      "published": "2025-11-01T10:00:50+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/6zMbLGe3lys/hqdefault.jpg"
+    },
+    {
+      "id": "f24P1LfpBvM",
+      "title": "🚀 JSConf México 2025: Live Stream Day 2",
+      "channel": "JSConf",
+      "published": "2025-11-01T06:58:45+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/f24P1LfpBvM/hqdefault.jpg"
+    },
+    {
+      "id": "u8W4oF0GXjE",
+      "title": "🚀 JSConf México 2025: Live Stream Day 1",
+      "channel": "JSConf",
+      "published": "2025-10-31T05:53:01+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/u8W4oF0GXjE/hqdefault.jpg"
+    },
+    {
+      "id": "kDSlIn3cmv0",
+      "title": "🚀 JSConf México 2025: Live Stream Day 1 - stage B",
+      "channel": "JSConf",
+      "published": "2025-10-30T22:33:02+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/kDSlIn3cmv0/hqdefault.jpg"
+    },
+    {
+      "id": "bKVfFN7QX8Y",
+      "title": "JSConf MX 2024 - día 2 - audio original",
+      "channel": "JSConf",
+      "published": "2024-11-02T00:35:51+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/bKVfFN7QX8Y/hqdefault.jpg"
+    },
+    {
+      "id": "Eg8eOIEE-7w",
+      "title": "JSConf MX 2024 - día 2 - audio traducido",
+      "channel": "JSConf",
+      "published": "2024-11-02T00:30:43+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/Eg8eOIEE-7w/hqdefault.jpg"
+    },
+    {
+      "id": "WVaXMPK-z74",
+      "title": "Building Empathy and Accessible Apps by Isabela Moreira",
+      "channel": "JSConf",
+      "published": "2024-07-19T06:15:52+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/WVaXMPK-z74/hqdefault.jpg"
+    },
+    {
+      "id": "bxBdzRGlTHI",
+      "title": "Picking the Low-Hanging Fruit – Easy Pentest Wins by Marcus Bointon",
+      "channel": "JSConf",
+      "published": "2024-07-19T06:15:52+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/bxBdzRGlTHI/hqdefault.jpg"
+    },
+    {
+      "id": "cZTHGPn1jdU",
+      "title": "Encrypting Data in the Browser - Exploring Web Crypto APIs by Aakansha Doshi",
+      "channel": "JSConf",
+      "published": "2024-07-19T06:15:52+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/cZTHGPn1jdU/hqdefault.jpg"
+    },
+    {
+      "id": "fOuybJCR-S0",
+      "title": "We're Not Robots: A Developer's Journey to Success, Creativity and Avoiding Burnout by Amanda Martin",
+      "channel": "JSConf",
+      "published": "2024-07-19T06:15:52+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/fOuybJCR-S0/hqdefault.jpg"
+    },
+    {
+      "id": "kzQ9dQsU4_k",
+      "title": "Hear! Hear! An Accessibility Tale from a Hearing-Impaired Senior Software Engineer by Ante Tomić",
+      "channel": "JSConf",
+      "published": "2024-07-19T06:15:52+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/kzQ9dQsU4_k/hqdefault.jpg"
+    },
+    {
+      "id": "nvmTOjKm2RY",
+      "title": "Infinite Patterns in the Digital Canvas by Francisca Beatriz Medina Concha",
+      "channel": "JSConf",
+      "published": "2024-07-19T06:15:52+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/nvmTOjKm2RY/hqdefault.jpg"
+    },
+    {
+      "id": "o9829nSzpEc",
+      "title": "Safeguarding Web Applications Against Token Theft: Fortifying Security and Trust by Shikhar Kapoor",
+      "channel": "JSConf",
+      "published": "2024-07-19T06:15:52+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/o9829nSzpEc/hqdefault.jpg"
+    },
+    {
+      "id": "p4io1rMp2Ck",
+      "title": "Oh No I'm Stuck! A Guide to Detangling a Complex Codebase by Toluwanimi Ajewole",
+      "channel": "JSConf",
+      "published": "2024-07-19T06:15:52+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/p4io1rMp2Ck/hqdefault.jpg"
+    },
+    {
+      "id": "tKHdASf_OOI",
+      "title": "What's Coming Next to JavaScript? by Nicolò Ribaudo",
+      "channel": "JSConf",
+      "published": "2024-07-19T06:15:52+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/tKHdASf_OOI/hqdefault.jpg"
+    },
+    {
+      "id": "QA9itboImlo",
+      "title": "GC26 Challenge Series | Welcome to the Jungle!",
+      "channel": "Gopher Academy",
+      "published": "2026-07-01T16:27:46+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/QA9itboImlo/hqdefault.jpg"
+    },
+    {
+      "id": "PtJrSsdwfO0",
+      "title": "See you at GopherCon 2026!",
+      "channel": "Gopher Academy",
+      "published": "2026-06-08T21:08:26+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/PtJrSsdwfO0/hqdefault.jpg"
+    },
+    {
+      "id": "YkXEPM2L-L8",
+      "title": "GopherCon 2024: Building a Self-Regulating Pressure Relief Mechanism in Go - Ellen Gao",
+      "channel": "Gopher Academy",
+      "published": "2026-01-08T22:25:40+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/YkXEPM2L-L8/hqdefault.jpg"
+    },
+    {
+      "id": "PZm_YbE3fcA",
+      "title": "GopherCon 2025: Porting the TypeScript Compiler to Go for a 10x Speedup V2 - Jake Bailey",
+      "channel": "Gopher Academy",
+      "published": "2026-01-07T01:55:38+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/PZm_YbE3fcA/hqdefault.jpg"
+    },
+    {
+      "id": "ddHxUhJoo1A",
+      "title": "GopherCon 2025: Goroutines and Cells: Lessons in Goal-Directed Systems - Carlisia Campos",
+      "channel": "Gopher Academy",
+      "published": "2026-01-03T03:21:22+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/ddHxUhJoo1A/hqdefault.jpg"
+    },
+    {
+      "id": "mLGDT2TxPrU",
+      "title": "GopherCon 2025: Supercharging ML Pipelines with Go - Vaidehi Thete",
+      "channel": "Gopher Academy",
+      "published": "2026-01-03T00:21:15+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/mLGDT2TxPrU/hqdefault.jpg"
+    },
+    {
+      "id": "r40Mwdvg38M",
+      "title": "GopherCon 2025: AI and Go: Opportunities and Challenges Panel Discussion",
+      "channel": "Gopher Academy",
+      "published": "2026-01-02T17:07:24+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/r40Mwdvg38M/hqdefault.jpg"
+    },
+    {
+      "id": "d1R8BS-ccNk",
+      "title": "GopherCon 2025: Go Faster: Integrating CUDA in Go for GPU Acceleration - Sam Burns",
+      "channel": "Gopher Academy",
+      "published": "2026-01-02T15:08:52+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/d1R8BS-ccNk/hqdefault.jpg"
+    },
+    {
+      "id": "VytHjiN_un0",
+      "title": "GopherCon 2025: Strategies for Auto-Instrumenting Go Applications Without Code Changes - Hannah Kim",
+      "channel": "Gopher Academy",
+      "published": "2026-01-02T13:15:34+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/VytHjiN_un0/hqdefault.jpg"
+    },
+    {
+      "id": "690c3D_Eb8Q",
+      "title": "GopherCon 2025: Hurtling into the AI Coding Era - Michael Richman",
+      "channel": "Gopher Academy",
+      "published": "2026-01-02T07:42:51+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/690c3D_Eb8Q/hqdefault.jpg"
+    },
+    {
+      "id": "oBnwPe298D0",
+      "title": "GopherCon 2025: Compile Time Errors My Belovéd - Branden J Brown",
+      "channel": "Gopher Academy",
+      "published": "2026-01-02T07:34:19+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/oBnwPe298D0/hqdefault.jpg"
+    },
+    {
+      "id": "o2_qRSTBZss",
+      "title": "GopherCon 2025: To Trie or Not to Trie: Typeahead Completion Using Redis - Garrett Denis",
+      "channel": "Gopher Academy",
+      "published": "2026-01-02T07:14:40+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/o2_qRSTBZss/hqdefault.jpg"
+    },
+    {
+      "id": "3FnwJ_axbOw",
+      "title": "GopherCon 2025: Not Your Parent’s Editor: A Gopher’s Guide to Neovim - Bethany Janos",
+      "channel": "Gopher Academy",
+      "published": "2026-01-02T05:42:34+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/3FnwJ_axbOw/hqdefault.jpg"
+    },
+    {
+      "id": "59VxxzfIXzA",
+      "title": "JetBrains | Rust Foundation AI Livestream Series - Smarter Coding Agents for Rust with Symposium",
+      "channel": "Rust Foundation",
+      "published": "2026-10-02T06:24:36+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/59VxxzfIXzA/hqdefault.jpg"
+    },
+    {
+      "id": "9Fd4DtsHcmw",
+      "title": "Joe Birr-Pixton &amp; Daniel McCarney: Project Update: &quot;A Decade of Rustls&quot; | RustConf 2026",
+      "channel": "Rust Foundation",
+      "published": "2026-10-01T18:25:24+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/9Fd4DtsHcmw/hqdefault.jpg"
+    },
+    {
+      "id": "QrMG606ho5k",
+      "title": "Dean Little: Sponsor Lightning Talk: &quot;Rustc: How I Learned to Respect the Compiler&quot; | RustConf 2026",
+      "channel": "Rust Foundation",
+      "published": "2026-10-01T18:25:24+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/QrMG606ho5k/hqdefault.jpg"
+    },
+    {
+      "id": "X-_jLdNrufQ",
+      "title": "Jon Seager: Keynote: &quot;Rust Adoption at Scale With Ubuntu&quot; | RustConf 2026",
+      "channel": "Rust Foundation",
+      "published": "2026-10-01T18:25:24+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/X-_jLdNrufQ/hqdefault.jpg"
+    },
+    {
+      "id": "aaQhGsXxluM",
+      "title": "Emma Forman Ling: Sponsor Lightning Talk: &quot;Scaling Infrastructure With Confidence in the Age of AI&quot;",
+      "channel": "Rust Foundation",
+      "published": "2026-10-01T18:25:24+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/aaQhGsXxluM/hqdefault.jpg"
+    },
+    {
+      "id": "j1TbyIK_btU",
+      "title": "Rebecca Rumbul: Opening Remarks | RustConf 2026",
+      "channel": "Rust Foundation",
+      "published": "2026-10-01T18:25:24+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/j1TbyIK_btU/hqdefault.jpg"
+    },
+    {
+      "id": "r31I4eDU104",
+      "title": "Tomáš Šedovič: Project Update: &quot;Bringing Rust into Python&quot; | RustConf 2026",
+      "channel": "Rust Foundation",
+      "published": "2026-10-01T18:25:24+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/r31I4eDU104/hqdefault.jpg"
+    },
+    {
+      "id": "w_1t9ELY6SE",
+      "title": "Lisa Crossman: &quot;Good or Bad Vibes? Coding with AI in Rust&quot; | RustConf 2026",
+      "channel": "Rust Foundation",
+      "published": "2026-10-01T18:25:24+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/w_1t9ELY6SE/hqdefault.jpg"
+    },
+    {
+      "id": "ncyHIrXFFAo",
+      "title": "Melih Elibol: &quot;Fearless Concurrency on the GPU&quot; | RustConf 2026",
+      "channel": "Rust Foundation",
+      "published": "2026-10-01T18:24:06+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/ncyHIrXFFAo/hqdefault.jpg"
+    },
+    {
+      "id": "ocHrWQKDuZ0",
+      "title": "Daniel Almeida: &quot;Tyr: A New Rust GPU Driver for the Linux Kernel&quot; | RustConf 2026",
+      "channel": "Rust Foundation",
+      "published": "2026-10-01T18:24:06+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/ocHrWQKDuZ0/hqdefault.jpg"
+    },
+    {
+      "id": "pbJ9P8rnegU",
+      "title": "Ian McIntyre: Lightning Talk: &quot;Using the Rust Standard Library on High-End MCUs&quot; | RustConf 2026",
+      "channel": "Rust Foundation",
+      "published": "2026-10-01T18:24:06+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/pbJ9P8rnegU/hqdefault.jpg"
+    },
+    {
+      "id": "rOR6JBsSnck",
+      "title": "Felipe Monteiro: &quot;Verifying the Rust Standard Library&quot; | RustConf 2026",
+      "channel": "Rust Foundation",
+      "published": "2026-10-01T18:24:06+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/rOR6JBsSnck/hqdefault.jpg"
+    },
+    {
+      "id": "sq7RvPdpZeQ",
+      "title": "Rakhi Sharma: &quot;Servo Devtools: Where Rust Meets JavaScript&quot; | RustConf 2026",
+      "channel": "Rust Foundation",
+      "published": "2026-10-01T18:24:06+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/sq7RvPdpZeQ/hqdefault.jpg"
+    },
+    {
+      "id": "tk3tgkPZQfM",
+      "title": "Craig Hamilton: Lightning Talk: &quot;Zero-copy Transfers with io_uring and Rust&quot; | RustConf 2026",
+      "channel": "Rust Foundation",
+      "published": "2026-10-01T18:24:06+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/tk3tgkPZQfM/hqdefault.jpg"
+    },
+    {
+      "id": "yWZm26aAOLA",
+      "title": "Ian McCormack: &quot;BorrowSanitizer: Securing Rust Across Foreign Function Boundaries&quot; | RustConf 2026",
+      "channel": "Rust Foundation",
+      "published": "2026-10-01T18:24:06+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/yWZm26aAOLA/hqdefault.jpg"
+    },
+    {
+      "id": "F1xrcb1Dbwc",
+      "title": "mini squawk: a day in nyc with tess &amp; ush",
+      "channel": "two bangs",
+      "published": "2022-06-09T04:32:47+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/F1xrcb1Dbwc/hqdefault.jpg"
+    },
+    {
+      "id": "_qSyPaTGsfg",
+      "title": "mbs to makeup // two bangs",
+      "channel": "two bangs",
+      "published": "2019-06-13T19:45:27+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/_qSyPaTGsfg/hqdefault.jpg"
+    },
+    {
+      "id": "OR1J--LkRqk",
+      "title": "last week of junior year // two bangs",
+      "channel": "two bangs",
+      "published": "2019-05-29T12:33:13+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/OR1J--LkRqk/hqdefault.jpg"
+    },
+    {
+      "id": "xTEYHB9LVL4",
+      "title": "frankie valli - can't take my eyes off you cover // twobangs (feat. uno)",
+      "channel": "two bangs",
+      "published": "2019-05-17T16:49:06+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/xTEYHB9LVL4/hqdefault.jpg"
+    },
+    {
+      "id": "UMG7mfWcouo",
+      "title": "squawk: uno's bday pt.2 // two bangs",
+      "channel": "two bangs",
+      "published": "2019-03-26T05:19:21+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/UMG7mfWcouo/hqdefault.jpg"
+    },
+    {
+      "id": "CwMDxisP8i4",
+      "title": "squawk: uno's bday pt.1 // two bangs",
+      "channel": "two bangs",
+      "published": "2019-03-23T16:45:04+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/CwMDxisP8i4/hqdefault.jpg"
+    },
+    {
+      "id": "YGW5R_-FzCA",
+      "title": "twobangs iconic moments compilation 2018",
+      "channel": "two bangs",
+      "published": "2019-02-21T08:31:18+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/YGW5R_-FzCA/hqdefault.jpg"
+    },
+    {
+      "id": "-bmSnVIOHDQ",
+      "title": "squawk: VLOGMAS pt.2 // two bangs",
+      "channel": "two bangs",
+      "published": "2018-12-21T20:40:47+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/-bmSnVIOHDQ/hqdefault.jpg"
+    },
+    {
+      "id": "192Fz4Vb86c",
+      "title": "squawk: VLOGMAS pt.1 // two bangs",
+      "channel": "two bangs",
+      "published": "2018-12-21T18:08:19+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/192Fz4Vb86c/hqdefault.jpg"
+    },
+    {
+      "id": "7Q_XJn_fxnc",
+      "title": "true love...dear future selves // two bangs",
+      "channel": "two bangs",
+      "published": "2018-12-13T14:01:29+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/7Q_XJn_fxnc/hqdefault.jpg"
+    },
+    {
+      "id": "mXzxOCRZ96s",
+      "title": "#30dayyogachallenge 2018 // two bangs",
+      "channel": "two bangs",
+      "published": "2018-10-29T13:00:25+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/mXzxOCRZ96s/hqdefault.jpg"
+    },
+    {
+      "id": "zMYZ5MFQAho",
+      "title": "Inside C++'s Biggest Challenge | Panel Discussion with Bjarne Stroustrup, Herb Sutter &amp; More",
+      "channel": "CppCon",
+      "published": "2026-06-27T19:00:06+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/zMYZ5MFQAho/hqdefault.jpg"
+    },
+    {
+      "id": "TSrymTXw5w8",
+      "title": "Instrumenting the Stack: Strategies for End-to-end Sanitizer Adoption - Damien Buhl - CppCon 2025",
+      "channel": "CppCon",
+      "published": "2026-06-05T15:32:50+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/TSrymTXw5w8/hqdefault.jpg"
+    },
+    {
+      "id": "gNPhJrXLiIs",
+      "title": "Lightning Talk: Eight Consteval Queens and Compile-Time Printing - Sagnik Bhattacharya - CppCon 2025",
+      "channel": "CppCon",
+      "published": "2026-06-02T15:02:09+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/gNPhJrXLiIs/hqdefault.jpg"
+    },
+    {
+      "id": "zygtgvHp_MM",
+      "title": "Lightning Talk: Navigating Code Reviews as a Code Author - Ben Deane - CppCon 2025",
+      "channel": "CppCon",
+      "published": "2026-06-01T15:02:46+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/zygtgvHp_MM/hqdefault.jpg"
+    },
+    {
+      "id": "Poz2Prh1N7g",
+      "title": "Lightning Talk: But I was doing the right thing! - Andrei Zissu - CppCon 2025",
+      "channel": "CppCon",
+      "published": "2026-05-29T15:02:09+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/Poz2Prh1N7g/hqdefault.jpg"
+    },
+    {
+      "id": "t2A2lfHe-xM",
+      "title": "Lightning Talk: Trust Nothing, Complain About Something, Want Everything - Jonathan Stein - CppCon",
+      "channel": "CppCon",
+      "published": "2026-05-28T15:02:06+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/t2A2lfHe-xM/hqdefault.jpg"
+    },
+    {
+      "id": "T-jWHKTygUM",
+      "title": "Lightning Talk: The BS Principle - John Pavan - CppCon 2025",
+      "channel": "CppCon",
+      "published": "2026-05-27T15:02:05+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/T-jWHKTygUM/hqdefault.jpg"
+    },
+    {
+      "id": "ZNgCXB9veWc",
+      "title": "Lightning Talk: Execution Policies: Not a Forward Progress Guarantee - Ruslan Arutyunyan",
+      "channel": "CppCon",
+      "published": "2026-05-26T15:02:08+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/ZNgCXB9veWc/hqdefault.jpg"
+    },
+    {
+      "id": "bP5eplaxG7o",
+      "title": "Lightning Talk: Can `set_value` Actually Throw? - Robert Leahy - CppCon 2025",
+      "channel": "CppCon",
+      "published": "2026-05-25T15:38:36+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/bP5eplaxG7o/hqdefault.jpg"
+    },
+    {
+      "id": "hIx4HpWBoKE",
+      "title": "Lightning Talk: Crafting CUDA Compatible C++ Code - Jon White - CppCon 2025",
+      "channel": "CppCon",
+      "published": "2026-05-22T15:02:06+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/hIx4HpWBoKE/hqdefault.jpg"
+    },
+    {
+      "id": "84qXqMMDS3I",
+      "title": "Lightning Talk: A C++20 Modules Performance Field Report - Tyler Drake - CppCon 2025",
+      "channel": "CppCon",
+      "published": "2026-05-21T15:02:12+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/84qXqMMDS3I/hqdefault.jpg"
+    },
+    {
+      "id": "9bq1gEw6OzY",
+      "title": "Lambdas, Ranges and trivially_copyable: Why This Matters for Parallel Algorithms - Ruslan Arutyunyan",
+      "channel": "CppCon",
+      "published": "2026-05-20T15:02:10+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/9bq1gEw6OzY/hqdefault.jpg"
+    },
+    {
+      "id": "eMnz158Y0Ok",
+      "title": "Lightning Talk: Understanding Data Dependency Chains - Makar Kuznietsov - CppCon 2025",
+      "channel": "CppCon",
+      "published": "2026-05-19T15:02:55+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/eMnz158Y0Ok/hqdefault.jpg"
+    },
+    {
+      "id": "rmfuWQXojtY",
+      "title": "Lightning Talk: How Fast Isn’t You Constexpr? - Hossein GhahramanzadehAnigh - CppCon 2025",
+      "channel": "CppCon",
+      "published": "2026-05-18T15:02:21+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/rmfuWQXojtY/hqdefault.jpg"
+    },
+    {
+      "id": "KjAH68yVnh8",
+      "title": "Failing to Introduce Elixir - John Darrington",
+      "channel": "ElixirConf",
+      "published": "2026-08-07T10:00:27+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/KjAH68yVnh8/hqdefault.jpg"
+    },
+    {
+      "id": "WjywFFK_l4U",
+      "title": "Lightning Talk: Darío De Filippis - Hacking your project config | ElixirConf US 2025",
+      "channel": "ElixirConf",
+      "published": "2026-08-04T10:00:11+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/WjywFFK_l4U/hqdefault.jpg"
+    },
+    {
+      "id": "OXwEn6RtcNU",
+      "title": "Lightning Talk: Joseph Koski - Functional Program with Elixir | ElixirConf US 2025",
+      "channel": "ElixirConf",
+      "published": "2026-07-31T10:00:26+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/OXwEn6RtcNU/hqdefault.jpg"
+    },
+    {
+      "id": "a3R4odDW9OM",
+      "title": "Lightning Talk: Paulo Valente - Calling Elixir function from Nx | ElixirConf US 2025",
+      "channel": "ElixirConf",
+      "published": "2026-07-28T10:00:05+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/a3R4odDW9OM/hqdefault.jpg"
+    },
+    {
+      "id": "AF1z6Z3bJKY",
+      "title": "Lightning Talk: Ivy Markwell - Data migrations with Monarch | ElixirConf US 2025",
+      "channel": "ElixirConf",
+      "published": "2026-07-21T10:00:09+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/AF1z6Z3bJKY/hqdefault.jpg"
+    },
+    {
+      "id": "nLWm8gIz8TI",
+      "title": "Lightning Talk: Kate Rezentes - Notion-land | ElixirConf US 2025",
+      "channel": "ElixirConf",
+      "published": "2026-07-17T10:00:27+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/nLWm8gIz8TI/hqdefault.jpg"
+    },
+    {
+      "id": "vHbBl6fg_xA",
+      "title": "Lightning Talk: Vito - An Absurd Situation with EPMD | ElixirConf US 2025",
+      "channel": "ElixirConf",
+      "published": "2026-07-14T10:00:33+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/vHbBl6fg_xA/hqdefault.jpg"
+    },
+    {
+      "id": "YIIJClhjxOA",
+      "title": "UXIDs in Elixir/Ecto - Adam Kirk | ElixirConf US 2025",
+      "channel": "ElixirConf",
+      "published": "2026-07-10T10:00:12+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/YIIJClhjxOA/hqdefault.jpg"
+    },
+    {
+      "id": "NADXJa0FCIo",
+      "title": "Writing Your Own Req Plugin - Jacob Swanner | ElixirConf US 2025",
+      "channel": "ElixirConf",
+      "published": "2026-07-07T10:00:31+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/NADXJa0FCIo/hqdefault.jpg"
+    },
+    {
+      "id": "B5e7M-Ogyho",
+      "title": "Building Websites with Tableau - Mitchell Hanberg | ElixirConf US 2025",
+      "channel": "ElixirConf",
+      "published": "2026-07-03T10:00:27+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/B5e7M-Ogyho/hqdefault.jpg"
+    },
+    {
+      "id": "ljx3uDsy9Rg",
+      "title": "Stranger Domains: Embedding your app across the web - Nathan Hessler | ElixirConf US 2025",
+      "channel": "ElixirConf",
+      "published": "2026-06-30T10:00:23+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/ljx3uDsy9Rg/hqdefault.jpg"
+    },
+    {
+      "id": "MzvauYjQgdQ",
+      "title": "How LiveDebugger makes your life easier - Krzysztof Nalepa | ElixirConf US 2025",
+      "channel": "ElixirConf",
+      "published": "2026-06-26T10:00:01+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/MzvauYjQgdQ/hqdefault.jpg"
+    },
+    {
+      "id": "dqqZSSxs-MA",
+      "title": "Lightning Talk: Jacob Swanner - Put your Scaller (Named Correctly) | ElixirConf US 2025",
+      "channel": "ElixirConf",
+      "published": "2026-06-24T10:00:31+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/dqqZSSxs-MA/hqdefault.jpg"
+    },
+    {
+      "id": "sPVmCS-yTho",
+      "title": "Introducing Elixir Observer - Juan Manuel Azambuja | ElixirConf US 2025",
+      "channel": "ElixirConf",
+      "published": "2026-06-23T10:00:04+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/sPVmCS-yTho/hqdefault.jpg"
+    },
+    {
+      "id": "4iUu7EqXfvs",
+      "title": "Beyond Safe Migrations: Better Practices for Ecto + PostgreSQL - Joe Harrow | ElixirConf US 2025",
+      "channel": "ElixirConf",
+      "published": "2026-06-19T10:00:32+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/4iUu7EqXfvs/hqdefault.jpg"
+    },
+    {
+      "id": "uExwRo_qM-k",
+      "title": "Will King - Lessons from Building a Game Engine from Scratch in Gleam",
+      "channel": "LambdaConf",
+      "published": "2025-08-26T09:41:54+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/uExwRo_qM-k/hqdefault.jpg"
+    },
+    {
+      "id": "hkNwku81ehw",
+      "title": "Aaron Hsu - My favorite verbose programming technique",
+      "channel": "LambdaConf",
+      "published": "2025-08-05T13:32:32+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/hkNwku81ehw/hqdefault.jpg"
+    },
+    {
+      "id": "PPpu2LbBh-s",
+      "title": "Isaac Shapira - Programming Power Paradox",
+      "channel": "LambdaConf",
+      "published": "2025-07-30T12:10:21+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/PPpu2LbBh-s/hqdefault.jpg"
+    },
+    {
+      "id": "IdpD5QIVOKQ",
+      "title": "Jonathan Blow - Jai Demo and Design Explanation (KEYNOTE) - Updated",
+      "channel": "LambdaConf",
+      "published": "2025-07-09T09:18:18+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/IdpD5QIVOKQ/hqdefault.jpg"
+    },
+    {
+      "id": "fZf-S5yfbfo",
+      "title": "Ben Hindman - A New Programming Model for Full-Stack Distributed Systems",
+      "channel": "LambdaConf",
+      "published": "2025-07-07T13:47:29+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/fZf-S5yfbfo/hqdefault.jpg"
+    },
+    {
+      "id": "lYtNkiqvYV4",
+      "title": "Alex Snaps - Enable all your infrastructure’s power with Rust &amp; Wasm",
+      "channel": "LambdaConf",
+      "published": "2025-07-07T13:46:05+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/lYtNkiqvYV4/hqdefault.jpg"
+    },
+    {
+      "id": "YKfAtuvsUR4",
+      "title": "Nasi Chaudhari - AI Meets Serverless: Automating Receipt Intelligence with AWS Lambda &amp; Textract",
+      "channel": "LambdaConf",
+      "published": "2025-07-07T13:45:09+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/YKfAtuvsUR4/hqdefault.jpg"
+    },
+    {
+      "id": "fxqRcgbXAHY",
+      "title": "Martin Förtsch &amp; Thomas Endres - AI'll Be Back: Exploring Diffusion Models for Image, Audio &amp; Video",
+      "channel": "LambdaConf",
+      "published": "2025-07-03T13:42:07+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/fxqRcgbXAHY/hqdefault.jpg"
+    },
+    {
+      "id": "hWhxIYNl1T8",
+      "title": "John De Goes - Euphoric Codecs &amp; Dazzling Rainbows",
+      "channel": "LambdaConf",
+      "published": "2025-06-30T13:43:13+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/hWhxIYNl1T8/hqdefault.jpg"
+    },
+    {
+      "id": "ogNtIJrO1kk",
+      "title": "Adam Krebs - A visual programming language for animation, geospatial and the web",
+      "channel": "LambdaConf",
+      "published": "2025-06-30T10:10:19+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/ogNtIJrO1kk/hqdefault.jpg"
+    },
+    {
+      "id": "_AuF7H1zTTU",
+      "title": "Eric Torreborre - Shoehorning dependency injection into a FP language - What does it take?",
+      "channel": "LambdaConf",
+      "published": "2025-06-30T10:03:24+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/_AuF7H1zTTU/hqdefault.jpg"
+    },
+    {
+      "id": "lJ1mYNIpA00",
+      "title": "Max Gfeller - Cut the Hype and Build Your Own AI Agents",
+      "channel": "LambdaConf",
+      "published": "2025-06-23T07:53:19+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/lJ1mYNIpA00/hqdefault.jpg"
+    },
+    {
+      "id": "e4ZE0kpa7jE",
+      "title": "Paulo Valente - Applied Machine Learning in Elixir",
+      "channel": "LambdaConf",
+      "published": "2025-06-23T07:51:29+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/e4ZE0kpa7jE/hqdefault.jpg"
+    },
+    {
+      "id": "ZJTIrPvVz4g",
+      "title": "Valentina Halasi - The Rise of Reasoning Models",
+      "channel": "LambdaConf",
+      "published": "2025-06-23T07:49:16+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/ZJTIrPvVz4g/hqdefault.jpg"
+    },
+    {
+      "id": "Yf5oIj816mw",
+      "title": "Daniel Vigovszky - Missing Testing Features in Rust",
+      "channel": "LambdaConf",
+      "published": "2025-06-23T07:43:53+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/Yf5oIj816mw/hqdefault.jpg"
+    },
+    {
+      "id": "u1JfYa413fY",
+      "title": "John Mumm - Safely Sharing Data - Reference Capabilities in the Pony Programming Language",
+      "channel": "Curry On!",
+      "published": "2019-07-26T12:22:15+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/u1JfYa413fY/hqdefault.jpg"
+    },
+    {
+      "id": "hmDz0Rv6hKI",
+      "title": "Cam Tenny - Beyond the Paper - End-to-End Program Analysis",
+      "channel": "Curry On!",
+      "published": "2019-07-26T12:15:24+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/hmDz0Rv6hKI/hqdefault.jpg"
+    },
+    {
+      "id": "_LLqXdFyjQY",
+      "title": "Stefan Marr - Dynamic Languages and Parallelism.",
+      "channel": "Curry On!",
+      "published": "2019-07-22T15:31:53+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/_LLqXdFyjQY/hqdefault.jpg"
+    },
+    {
+      "id": "mPna6D21Eqg",
+      "title": "Lars Bak - The Making of a Secure and Robust IoT Development Platform",
+      "channel": "Curry On!",
+      "published": "2019-07-19T08:40:14+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/mPna6D21Eqg/hqdefault.jpg"
+    },
+    {
+      "id": "wYMzMuBO_8M",
+      "title": "Tomas Petricek - The search for fundamental software engineering principles",
+      "channel": "Curry On!",
+      "published": "2019-07-19T08:38:00+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/wYMzMuBO_8M/hqdefault.jpg"
+    },
+    {
+      "id": "055M-I8DlRs",
+      "title": "Szymon Kaliski - Walking In The Garden Of Forking Paths",
+      "channel": "Curry On!",
+      "published": "2019-07-19T08:37:44+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/055M-I8DlRs/hqdefault.jpg"
+    },
+    {
+      "id": "Ok0gTvn-gs8",
+      "title": "Jordy Moos - The Tricks of Game Programming in a Pure Functional Language",
+      "channel": "Curry On!",
+      "published": "2019-07-19T08:36:31+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/Ok0gTvn-gs8/hqdefault.jpg"
+    },
+    {
+      "id": "pCRnMrDeLV4",
+      "title": "Gargi Sharma - Write your own Container in Rust!",
+      "channel": "Curry On!",
+      "published": "2019-07-19T08:35:53+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/pCRnMrDeLV4/hqdefault.jpg"
+    },
+    {
+      "id": "sBlaySntWcQ",
+      "title": "Thomas Ball - The Correct Cloud - Logic and Languages",
+      "channel": "Curry On!",
+      "published": "2019-07-19T08:34:57+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/sBlaySntWcQ/hqdefault.jpg"
+    },
+    {
+      "id": "HalZfFdWuP4",
+      "title": "David Schmudde - Say What You Mean - Exploring Declarative Computation in Art",
+      "channel": "Curry On!",
+      "published": "2019-07-19T08:34:45+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/HalZfFdWuP4/hqdefault.jpg"
+    },
+    {
+      "id": "tCa7WpHtkgM",
+      "title": "Sebastian Blessing - Run, actor, run",
+      "channel": "Curry On!",
+      "published": "2019-07-19T08:34:18+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/tCa7WpHtkgM/hqdefault.jpg"
+    },
+    {
+      "id": "jQddA20MZXs",
+      "title": "Philip Wadler - Plutus and Marlowe",
+      "channel": "Curry On!",
+      "published": "2019-07-19T08:33:05+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/jQddA20MZXs/hqdefault.jpg"
+    },
+    {
+      "id": "-OPN7QPsYKE",
+      "title": "Simon Marlow - Glean - facts about code",
+      "channel": "Curry On!",
+      "published": "2019-07-18T19:34:05+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/-OPN7QPsYKE/hqdefault.jpg"
+    },
+    {
+      "id": "ePCpq0AMyVk",
+      "title": "Jan Vitek - Getting everything wrong without doing anything right!",
+      "channel": "Curry On!",
+      "published": "2019-07-18T19:34:00+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/ePCpq0AMyVk/hqdefault.jpg"
+    },
+    {
+      "id": "OTcbp1fk0JY",
+      "title": "Adelbert Chang - Microservice Architecture, a programming languages perspective",
+      "channel": "Curry On!",
+      "published": "2019-07-18T19:33:35+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/OTcbp1fk0JY/hqdefault.jpg"
+    },
+    {
+      "id": "TC_Nqbky72I",
+      "title": "Meet Qasim Sarfraz - Speaker at KubeCon + CloudNativeCon North America",
+      "channel": "CNCF [Cloud Native Computing Foundation]",
+      "published": "2026-10-02T18:00:35+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/TC_Nqbky72I/hqdefault.jpg"
+    },
+    {
+      "id": "M11guhZDN8g",
+      "title": "ChatLoopBackOff Episode 82: SlimFaas with Thomas and Guillaume",
+      "channel": "CNCF [Cloud Native Computing Foundation]",
+      "published": "2026-10-02T05:06:22+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/M11guhZDN8g/hqdefault.jpg"
+    },
+    {
+      "id": "iJxkWMEwCkM",
+      "title": "Beyond protoc --decode: Schema Inference, Lossless Decoding, and... Frederic Ruget, S3NS",
+      "channel": "CNCF [Cloud Native Computing Foundation]",
+      "published": "2026-10-01T21:46:42+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/iJxkWMEwCkM/hqdefault.jpg"
+    },
+    {
+      "id": "oW5AYOAqnOo",
+      "title": "Keynote: State of gRPC - Aspi Siganporia, Google",
+      "channel": "CNCF [Cloud Native Computing Foundation]",
+      "published": "2026-10-01T21:46:42+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/oW5AYOAqnOo/hqdefault.jpg"
+    },
+    {
+      "id": "wCWmpQoa6qo",
+      "title": "What's new in gRPC Observability - Eric Anderson &amp; Madhav Bissa, Google",
+      "channel": "CNCF [Cloud Native Computing Foundation]",
+      "published": "2026-10-01T21:46:42+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/wCWmpQoa6qo/hqdefault.jpg"
+    },
+    {
+      "id": "LfsbC9CayA8",
+      "title": "gRPC-Python: Major Feature Updates - Sreenithi Sridharan &amp; Sergii Tkachenko, Google",
+      "channel": "CNCF [Cloud Native Computing Foundation]",
+      "published": "2026-10-01T21:46:39+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/LfsbC9CayA8/hqdefault.jpg"
+    },
+    {
+      "id": "OAe8pB6VVBE",
+      "title": "A Lightweight gRPC-Compatible Implementation for Sidecars - Tim Burks, Agent IO",
+      "channel": "CNCF [Cloud Native Computing Foundation]",
+      "published": "2026-10-01T21:46:39+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/OAe8pB6VVBE/hqdefault.jpg"
+    },
+    {
+      "id": "PmsvVjXow4M",
+      "title": "grpcgi: Enabling Universal Web Serving, Native mTLS, and xDS on the gRPC Mesh - Mehrdad Afshari",
+      "channel": "CNCF [Cloud Native Computing Foundation]",
+      "published": "2026-10-01T21:46:39+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/PmsvVjXow4M/hqdefault.jpg"
+    },
+    {
+      "id": "Q-dLa9DSCD8",
+      "title": "Streaming Was Only Half the Fix: Retrofitting a Stable gRPC API - Sohan Kunkerkar, Red Hat",
+      "channel": "CNCF [Cloud Native Computing Foundation]",
+      "published": "2026-10-01T21:46:39+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/Q-dLa9DSCD8/hqdefault.jpg"
+    },
+    {
+      "id": "RC1AzBS3MLQ",
+      "title": "From Writing REST to Writing gRPC - Mukul Mantosh, Independent",
+      "channel": "CNCF [Cloud Native Computing Foundation]",
+      "published": "2026-10-01T21:46:39+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/RC1AzBS3MLQ/hqdefault.jpg"
+    },
+    {
+      "id": "RZyy529VwFU",
+      "title": "How Netflix Leverages gRPC for Resilience at Scale - Olivia Bronstein &amp; Umair Khan, Netflix",
+      "channel": "CNCF [Cloud Native Computing Foundation]",
+      "published": "2026-10-01T21:46:39+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/RZyy529VwFU/hqdefault.jpg"
+    },
+    {
+      "id": "W5QAf2YrVg0",
+      "title": "High-Performance gRPC Beyond HTTP/2 - Thiyagarajan Velappan &amp; Ravi Cherukuru, Mastercard",
+      "channel": "CNCF [Cloud Native Computing Foundation]",
+      "published": "2026-10-01T21:46:39+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/W5QAf2YrVg0/hqdefault.jpg"
+    },
+    {
+      "id": "cLMAqEqW3U4",
+      "title": "gRPC and Post-Quantum Cryptography - Riya Mehta, Google",
+      "channel": "CNCF [Cloud Native Computing Foundation]",
+      "published": "2026-10-01T21:46:39+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/cLMAqEqW3U4/hqdefault.jpg"
+    },
+    {
+      "id": "cj8yTM6hoXg",
+      "title": "Adopting gRPC for Low Latency, High Bandwidth Scenarios - Christopher Cifra, Emerson",
+      "channel": "CNCF [Cloud Native Computing Foundation]",
+      "published": "2026-10-01T21:46:39+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/cj8yTM6hoXg/hqdefault.jpg"
+    },
+    {
+      "id": "j6OHoaiVe7Q",
+      "title": "Stan Getz &amp; Charlie Byrd - Samba de uma Nota Só",
+      "channel": "USENIX",
+      "published": "2019-12-05T08:07:45+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/j6OHoaiVe7Q/hqdefault.jpg"
+    },
+    {
+      "id": "L7c5DudSmUE",
+      "title": "Jacintha - Danny Boy (360° View)",
+      "channel": "USENIX",
+      "published": "2019-11-15T15:39:08+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/L7c5DudSmUE/hqdefault.jpg"
+    },
+    {
+      "id": "nDy5UDuavqY",
+      "title": "Psycho - The Murder (London SO, Bernard Herrmann)",
+      "channel": "USENIX",
+      "published": "2019-10-06T07:05:41+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/nDy5UDuavqY/hqdefault.jpg"
+    },
+    {
+      "id": "yh2SvIllBZ8",
+      "title": "Henry Mancini - The Village Inn",
+      "channel": "USENIX",
+      "published": "2019-10-05T13:09:36+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/yh2SvIllBZ8/hqdefault.jpg"
+    },
+    {
+      "id": "4YxiPmaYzCU",
+      "title": "Kari Bremnes - A Lover in Berlin",
+      "channel": "USENIX",
+      "published": "2019-09-26T08:35:48+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/4YxiPmaYzCU/hqdefault.jpg"
+    },
+    {
+      "id": "vcS1QNqiigg",
+      "title": "Grover Washington Jr. - Take Five",
+      "channel": "USENIX",
+      "published": "2019-09-20T07:16:10+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/vcS1QNqiigg/hqdefault.jpg"
+    },
+    {
+      "id": "7b1ry_gLg0s",
+      "title": "Esther Ofarim - Pavane",
+      "channel": "USENIX",
+      "published": "2019-09-17T09:32:57+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/7b1ry_gLg0s/hqdefault.jpg"
+    },
+    {
+      "id": "QLYGw3LHUxk",
+      "title": "Grace Haggerty - Quiet Nights, Quiet Stars (360° View)",
+      "channel": "USENIX",
+      "published": "2019-09-09T11:22:39+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/QLYGw3LHUxk/hqdefault.jpg"
+    },
+    {
+      "id": "Sb4byKBmiRo",
+      "title": "Crashing Waves",
+      "channel": "USENIX",
+      "published": "2019-09-09T07:29:46+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/Sb4byKBmiRo/hqdefault.jpg"
+    },
+    {
+      "id": "xjfO1sqgVdY",
+      "title": "Sunrise 🌤️",
+      "channel": "USENIX",
+      "published": "2019-08-18T14:04:06+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/xjfO1sqgVdY/hqdefault.jpg"
+    },
+    {
+      "id": "XBAPsv9SBjg",
+      "title": "🎧 David Hazeltine Trio - Für Elise (360° View)",
+      "channel": "USENIX",
+      "published": "2019-07-31T09:41:58+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/XBAPsv9SBjg/hqdefault.jpg"
+    },
+    {
+      "id": "hbPiaO2iIPU",
+      "title": "Valerie Joyce - Fever (360° View)",
+      "channel": "USENIX",
+      "published": "2019-07-07T09:20:27+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/hbPiaO2iIPU/hqdefault.jpg"
+    },
+    {
+      "id": "WwqycAB-P5U",
+      "title": "Hoff Ensemble - Blågutten (360° View)",
+      "channel": "USENIX",
+      "published": "2019-07-05T14:13:22+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/WwqycAB-P5U/hqdefault.jpg"
+    },
+    {
+      "id": "b0FpcnqwU9U",
+      "title": "The Body Acoustic - Club Descarga (360° View)",
+      "channel": "USENIX",
+      "published": "2019-06-26T10:00:49+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/b0FpcnqwU9U/hqdefault.jpg"
+    },
+    {
+      "id": "3SuaLdlhHag",
+      "title": "Chuck Mangione - Peggy Hill (360° View)",
+      "channel": "USENIX",
+      "published": "2019-06-24T14:40:03+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/3SuaLdlhHag/hqdefault.jpg"
+    },
+    {
+      "id": "XyT00Hdld6c",
+      "title": "DCSG1 - Pwn2Own Level Break of a Printer - SungJun Park, WonBeen Im",
+      "channel": "DEFCONConference",
+      "published": "2026-09-30T22:04:54+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/XyT00Hdld6c/hqdefault.jpg"
+    },
+    {
+      "id": "YA5zrUSpxxI",
+      "title": "DCSG1 - Augmenting Apple's Source Code and OS Logs with AI Agents -Olivia Gallucci",
+      "channel": "DEFCONConference",
+      "published": "2026-09-30T22:04:54+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/YA5zrUSpxxI/hqdefault.jpg"
+    },
+    {
+      "id": "euCa-VJnON4",
+      "title": "DCSG1 - Actual OT Cyber Security -  Dillon Lee",
+      "channel": "DEFCONConference",
+      "published": "2026-09-30T22:04:54+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/euCa-VJnON4/hqdefault.jpg"
+    },
+    {
+      "id": "kBGaSIca82k",
+      "title": "DCSG1- Are we nurturing the next generation of hackers or losing them - SherpaSec",
+      "channel": "DEFCONConference",
+      "published": "2026-09-30T22:04:54+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/kBGaSIca82k/hqdefault.jpg"
+    },
+    {
+      "id": "qKJYPeVtGW4",
+      "title": "DCSG1 - Autonomous and Exploitable: Breaking AI Agents before they break everything else - Aaron Ang",
+      "channel": "DEFCONConference",
+      "published": "2026-09-30T22:04:54+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/qKJYPeVtGW4/hqdefault.jpg"
+    },
+    {
+      "id": "vXNpaN3LjIs",
+      "title": "DCSG1 - Where's our Hats: The founding of N0H4Ts  - Pengfei Yu, Zara Teo",
+      "channel": "DEFCONConference",
+      "published": "2026-09-30T22:04:54+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/vXNpaN3LjIs/hqdefault.jpg"
+    },
+    {
+      "id": "yKnXPkpuS0I",
+      "title": "DCSG1 - Adversaries Have AI. You Have $0. Here's How You Win Anyway - Aaron Crow",
+      "channel": "DEFCONConference",
+      "published": "2026-09-30T22:04:54+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/yKnXPkpuS0I/hqdefault.jpg"
+    },
+    {
+      "id": "yzqFFMn1qPw",
+      "title": "DSCG1 - CryptoCurrency Opening Keynote - Michael Schloh",
+      "channel": "DEFCONConference",
+      "published": "2026-09-30T22:04:54+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/yzqFFMn1qPw/hqdefault.jpg"
+    },
+    {
+      "id": "zqOC2EZUV3M",
+      "title": "DCSG1 - Introduction to Range Village Community - Gladiator",
+      "channel": "DEFCONConference",
+      "published": "2026-09-30T22:04:54+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/zqOC2EZUV3M/hqdefault.jpg"
+    },
+    {
+      "id": "TuWzt-du9ZI",
+      "title": "DCSG1 -  DEF CON History and Lore -  The Dark Tangent",
+      "channel": "DEFCONConference",
+      "published": "2026-09-30T22:04:52+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/TuWzt-du9ZI/hqdefault.jpg"
+    },
+    {
+      "id": "0Ipwd0FcTAo",
+      "title": "DCSG1 - The DEF CON Singapore Badge Presentation -  Michael Schloh, Joyce Ng, Dani Weidman",
+      "channel": "DEFCONConference",
+      "published": "2026-09-30T22:04:51+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/0Ipwd0FcTAo/hqdefault.jpg"
+    },
+    {
+      "id": "3S3gmjJCu34",
+      "title": "DCSG1 - You can't engineer your way out of a bad AI stack - Paul",
+      "channel": "DEFCONConference",
+      "published": "2026-09-30T22:04:51+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/3S3gmjJCu34/hqdefault.jpg"
+    },
+    {
+      "id": "4gn5cjVbf40",
+      "title": "DCSG1 - Solidity Smart Contracts - Kennashka DeSilva",
+      "channel": "DEFCONConference",
+      "published": "2026-09-30T22:04:51+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/4gn5cjVbf40/hqdefault.jpg"
+    },
+    {
+      "id": "81holvvSdcA",
+      "title": "DSCG1 - Attack and Defense of AI Enabled Systems - Hahna Latonick",
+      "channel": "DEFCONConference",
+      "published": "2026-09-30T22:04:51+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/81holvvSdcA/hqdefault.jpg"
+    },
+    {
+      "id": "8Pbqi61wvDo",
+      "title": "DCSG1 - RFIDrive:  Access Badges for Cars - Kamel Ghali, Smriti",
+      "channel": "DEFCONConference",
+      "published": "2026-09-30T22:04:51+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/8Pbqi61wvDo/hqdefault.jpg"
+    },
+    {
+      "id": "uubcJ9Bvt7M",
+      "title": "Lightning Talks | SSW 2026",
+      "channel": "Software Should Work",
+      "published": "2026-08-10T14:01:00+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/uubcJ9Bvt7M/hqdefault.jpg"
+    },
+    {
+      "id": "ZUk2TKZIo7s",
+      "title": "AI &amp; The University - Carson Gross | SSW 2026",
+      "channel": "Software Should Work",
+      "published": "2026-08-07T13:56:31+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/ZUk2TKZIo7s/hqdefault.jpg"
+    },
+    {
+      "id": "mZgglPK8Rg0",
+      "title": "Code Worth Writing - Ray Myers | SSW 2026",
+      "channel": "Software Should Work",
+      "published": "2026-08-06T14:32:26+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/mZgglPK8Rg0/hqdefault.jpg"
+    },
+    {
+      "id": "zSZkLyD9ILI",
+      "title": "How to Find Bugs in Systems That Don't Exist - Hillel Wayne | SSW 2026",
+      "channel": "Software Should Work",
+      "published": "2026-08-05T14:32:11+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/zSZkLyD9ILI/hqdefault.jpg"
+    },
+    {
+      "id": "Q4y0xNFoW00",
+      "title": "System Daydreams and Logarithmic Colored Glasses - Marianne Bellotti | SSW 2026",
+      "channel": "Software Should Work",
+      "published": "2026-08-04T13:12:48+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/Q4y0xNFoW00/hqdefault.jpg"
+    },
+    {
+      "id": "V_qzqY1bb7I",
+      "title": "Reliability Lessons From SQLite - Richard Hipp | SSW 2026",
+      "channel": "Software Should Work",
+      "published": "2026-08-03T14:54:25+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/V_qzqY1bb7I/hqdefault.jpg"
+    },
+    {
+      "id": "WaPOtisNu1k",
+      "title": "Derivations to Deployments: Practical Nix in Production - John Murray | SSW 2026",
+      "channel": "Software Should Work",
+      "published": "2026-07-31T12:12:03+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/WaPOtisNu1k/hqdefault.jpg"
+    },
+    {
+      "id": "PHYCRubnmSM",
+      "title": "Saturation: How Your Software Will Fail at Scale - Lorin Hochstein | SSW 2026",
+      "channel": "Software Should Work",
+      "published": "2026-07-30T14:54:07+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/PHYCRubnmSM/hqdefault.jpg"
+    },
+    {
+      "id": "W7Ki3aXgmZU",
+      "title": "Put State in the Right Place - Delaney Gillilan | SSW 2026",
+      "channel": "Software Should Work",
+      "published": "2026-07-29T13:47:07+00:00",
+      "thumbnail_url": "https://i4.ytimg.com/vi/W7Ki3aXgmZU/hqdefault.jpg"
+    },
+    {
+      "id": "E82ly38YEEQ",
+      "title": "Dependency Cultures - Richard Feldman | SSW 2026",
+      "channel": "Software Should Work",
+      "published": "2026-07-28T13:16:46+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/E82ly38YEEQ/hqdefault.jpg"
+    },
+    {
+      "id": "0BXuYlNrUmE",
+      "title": "The Unreasonable Effectiveness of Constructive Data Modeling - Alexis King | SSW 2026",
+      "channel": "Software Should Work",
+      "published": "2026-07-27T12:52:25+00:00",
+      "thumbnail_url": "https://i1.ytimg.com/vi/0BXuYlNrUmE/hqdefault.jpg"
+    },
+    {
+      "id": "zLZwpH5lCD4",
+      "title": "Don't Take the Black Pill - Andrew Kelley | SSW 2026",
+      "channel": "Software Should Work",
+      "published": "2026-07-24T13:30:11+00:00",
+      "thumbnail_url": "https://i3.ytimg.com/vi/zLZwpH5lCD4/hqdefault.jpg"
+    },
+    {
+      "id": "5F-2Y1LPRek",
+      "title": "Fil-C: Garbage In, Memory Safety Out! - Filip Pizlo | SSW 2026",
+      "channel": "Software Should Work",
+      "published": "2026-07-23T18:55:20+00:00",
+      "thumbnail_url": "https://i2.ytimg.com/vi/5F-2Y1LPRek/hqdefault.jpg"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+# YouTube channel allowlist for dvr.
+# One channel id per line. Lines starting with `#` are comments.
+# All channels are org-owned conference channels (no Shorts, no fan channels).
+# See openspec/changes/add-dvr-pwa/proposal.md for the curation policy.
+#
+# 13 channels (JSConf EU and JSConf US share the JSConf org channel).
+UC_QIfHvN9auy2CoOdSfMWDw   # Strange Loop Conference
+UCzoVCacndDCfGDf41P-z0iA   # JSConf (EU + US)
+UCx9QVEApa5BKLw9r8cnOFEA   # GopherCon (run by Gopher Academy)
+UC0jzvznwtnsdXYIp415oC9g   # RustConf (run by Rust Foundation)
+UC_R1ioWBZZEcHS3vZlFd4BA   # !!Con
+UCMlGfpWw-RUdWX_JbLCukXg   # CppCon
+UC0l2QTnO1P2iph-86HHilMQ   # ElixirConf
+UCEtohQeDqMSebi2yvLMUItg   # LambdaConf
+UC-WICcSW1k3HsScuXxDrp0w   # Curry On
+UCvqbFHwN-nwalWPjPUKpvTA   # CNCF (KubeCon, CloudNativeCon)
+UCHwLg2XZDZL3OvrwpzleKjw   # USENIX (OSDI, NSDI, ATC, SOUPS, USENIX Security)
+UC6Om9kAkl32dWlDSNlDS9Iw   # DEF CON
+UCMEeDOfBauUM6-gDQn4b4Ig   # Software Should Work
