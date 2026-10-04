@@ -172,21 +172,28 @@ in `scripts/` so it can be re-run by hand.
 Pages can serve from `docs/`, but `site/` is the more conventional
 name and lets us choose the publishing source freely).
 
-### D8. Deployment: GitHub Pages from `main` / `site/`
+### D8. Deployment: GitHub Actions `deploy` job, gated on tests
 
-**Decision:** GitHub Pages is configured to serve from the `site/`
-directory on the `main` branch (Settings -> Pages -> Source:
-`main`, folder: `/site`). No GitHub Actions needed. After a catalog
-refresh, the developer commits the new `catalog.json` and pushes;
-the site updates on the next Pages deploy.
+**Decision:** Publishing is a GitHub Actions `deploy` job that runs
+only on push to `main`, only after the `test` job passes. It
+uploads `site/` as a Pages artifact via
+`actions/upload-pages-artifact@v3` and deploys it via
+`actions/deploy-pages@v4`, targeting the `github-pages` environment
+with `pages: write` and `id-token: write` permissions. The repo's
+Pages source is set to "GitHub Actions" (one-time UI change after
+the first push). See the `add-ci-deploy` change for the workflow
+file in full.
 
-**Why:** The project is a static site. The simplest deploy is the
-one GitHub Pages does automatically. There is no build step on
-the Pages side because there is no build step for the app code.
+**Why:** The test suite becomes the deploy gate. A failing test
+blocks the publish. A PR is built and tested but never deployed.
+No secrets, no PAT, no SSH key - the `GITHUB_TOKEN` provided by
+the runner is enough. The previous "branch /site" deploy was
+un-gated, so a red test could land on `main` and the broken site
+would be live within a minute.
 
-**Alternatives considered:** A GitHub Actions workflow that
-re-runs the build script and re-deploys (we said no CI). Serving
-from a `gh-pages` branch (extra branch to maintain).
+**Alternatives considered:** Native Pages deploy from `main` / `/site`
+(rejected: no gate, no test signal on deploy). A custom deploy
+script (rejected: reinvents the official actions).
 
 ## Risks / Trade-offs
 

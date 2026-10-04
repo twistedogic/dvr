@@ -51,8 +51,11 @@ None. The project has no existing capabilities.
 - Channel IDs for some entries are still TBD at proposal time; the build script
   resolves them at first run. The verified IDs (CNCF, USENIX, DEF CON,
   Strange Loop, Software Should Work) are baked into the proposal.
-- GitHub Pages workflow: push to `main` on the publishing branch deploys.
-  No CI, no secrets.
+- Deploy is handled by a GitHub Actions `deploy` job (see the
+  `add-ci-deploy` change) that runs after the `test` job on push to `main`
+  and publishes `site/` to GitHub Pages via `actions/deploy-pages`. No
+  secrets, no PAT, no SSH key. The repo's Pages source is set to
+  "GitHub Actions" (one-time UI change).
 - No new runtime dependencies. YouTube IFrame API is loaded from
   `youtube-nocookie.com` via script tag.
 - `localStorage` keys: `dvr:current`, `dvr:progress`, `dvr:completed`.

@@ -67,6 +67,6 @@
 
 ## 10. Deploy
 
-- [ ] 10.1 Push the repo to GitHub under the chosen owner/name and verify by visiting the repo URL (git repo initialized locally with initial commit; requires a GitHub remote from the user: `git remote add origin git@github.com:<owner>/dvr.git && git push -u origin main`)
-- [ ] 10.2 In repo Settings -> Pages, set Source to `main` / `/site` and verify by visiting the published URL after a minute (user action, requires GitHub UI)
+- [x] 10.1 Push the repo to GitHub under the chosen owner/name and verify by visiting the repo URL (pushed to git@github.com:twistedogic/dvr.git in commits 2782c5e, feb059a, 8dca5f1)
+- [ ] 10.2 In repo Settings -> Pages, set Source to "GitHub Actions" (one-time, lets the `deploy` job publish `site/`); the first deploy runs on the next push after this change lands
 - [ ] 10.3 From a phone (mobile data, not Wi-Fi) visit the published URL, install the PWA, and verify the IDLE view loads and a talk plays (user action, requires a real phone)
