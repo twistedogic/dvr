@@ -14,6 +14,6 @@
 
 ## 3. Commit and push
 
-- [ ] 3.1 Commit the workflow change and the prior-artifact updates in one commit
-- [ ] 3.2 Push to `origin main` and verify `git status` shows the branch is up to date
-- [ ] 3.3 (User) In GitHub repo Settings -> Pages, change Source to "GitHub Actions" so the first deploy job can publish
+- [x] 3.1 Commit the workflow change and the prior-artifact updates in one commit
+- [x] 3.2 Push to `origin main` and verify `git status` shows the branch is up to date
+- [ ] 3.3 (User) In GitHub repo Settings -> Pages, change Source to "GitHub Actions" so the first deploy job can publish (first attempt failed at the deploy step with 404 "Ensure GitHub Pages has been enabled"; confirmed via `gh api repos/twistedogic/dvr/pages` that Pages is not yet configured on the repo)
