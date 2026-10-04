@@ -2,7 +2,9 @@
 // the catalog and thumbnails, passes everything else (the YouTube embed)
 // straight through.
 
-const CACHE = 'dvr-v1';
+// Bump CACHE whenever a SHELL file's content changes, so returning users
+// receive the updated shell instead of their frozen first-visit copy.
+const CACHE = 'dvr-v2';
 const SHELL = [
   './',
   'index.html',
