@@ -9,5 +9,5 @@
 
 ## 2. Commit and push
 
-- [ ] 2.1 Commit the new script and the regenerated icons
-- [ ] 2.2 Push to `origin main` and verify the CI deploy job goes green
+- [x] 2.1 Commit the new script and the regenerated icons
+- [x] 2.2 Push to `origin main` and verify the CI deploy job goes green (run 37177566026: test ✓ deploy ✓)
