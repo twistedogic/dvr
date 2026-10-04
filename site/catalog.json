@@ -1,161 +1,106 @@
 {
-  "generated_at": "2026-10-03T16:44:58.274Z",
-  "channels": [
-    {
-      "id": "_QIfHvN9auy2CoOdSfMWDw",
-      "name": "Strange Loop Conference"
-    },
-    {
-      "id": "zoVCacndDCfGDf41P-z0iA",
-      "name": "JSConf"
-    },
-    {
-      "id": "x9QVEApa5BKLw9r8cnOFEA",
-      "name": "Gopher Academy"
-    },
-    {
-      "id": "0jzvznwtnsdXYIp415oC9g",
-      "name": "Rust Foundation"
-    },
-    {
-      "id": "_R1ioWBZZEcHS3vZlFd4BA",
-      "name": "two bangs"
-    },
-    {
-      "id": "MlGfpWw-RUdWX_JbLCukXg",
-      "name": "CppCon"
-    },
-    {
-      "id": "0l2QTnO1P2iph-86HHilMQ",
-      "name": "ElixirConf"
-    },
-    {
-      "id": "EtohQeDqMSebi2yvLMUItg",
-      "name": "LambdaConf"
-    },
-    {
-      "id": "-WICcSW1k3HsScuXxDrp0w",
-      "name": "Curry On!"
-    },
-    {
-      "id": "vqbFHwN-nwalWPjPUKpvTA",
-      "name": "CNCF [Cloud Native Computing Foundation]"
-    },
-    {
-      "id": "HwLg2XZDZL3OvrwpzleKjw",
-      "name": "USENIX"
-    },
-    {
-      "id": "6Om9kAkl32dWlDSNlDS9Iw",
-      "name": "DEFCONConference"
-    },
-    {
-      "id": "MEeDOfBauUM6-gDQn4b4Ig",
-      "name": "Software Should Work"
-    }
-  ],
   "talks": [
     {
       "id": "OCYU0LtqRH0",
-      "title": "&quot;Birdsong as code&quot; by Chris Ford (Strange Loop 2023)",
+      "title": "\"Birdsong as code\" by Chris Ford (Strange Loop 2023)",
       "channel": "Strange Loop Conference",
       "published": "2023-10-13T19:56:00+00:00",
       "thumbnail_url": "https://i4.ytimg.com/vi/OCYU0LtqRH0/hqdefault.jpg"
     },
     {
       "id": "n2yJ3FBtU4Y",
-      "title": "&quot;Software &amp; The Game of Go&quot; by David Nolen (Strange Loop 2023)",
+      "title": "\"Software & The Game of Go\" by David Nolen (Strange Loop 2023)",
       "channel": "Strange Loop Conference",
       "published": "2023-10-13T17:36:16+00:00",
       "thumbnail_url": "https://i3.ytimg.com/vi/n2yJ3FBtU4Y/hqdefault.jpg"
     },
     {
       "id": "NcUJnmBqHTY",
-      "title": "&quot;Cursorless: A spoken language for editing code&quot; by Pokey Rule (Strange Loop 2023)",
+      "title": "\"Cursorless: A spoken language for editing code\" by Pokey Rule (Strange Loop 2023)",
       "channel": "Strange Loop Conference",
       "published": "2023-10-13T16:55:23+00:00",
       "thumbnail_url": "https://i3.ytimg.com/vi/NcUJnmBqHTY/hqdefault.jpg"
     },
     {
       "id": "V9krYlzSgGk",
-      "title": "&quot;Using data-driven metrics to anticipate and prevent security incidents&quot; by Caitlin Buckshaw",
+      "title": "\"Using data-driven metrics to anticipate and prevent security incidents\" by Caitlin Buckshaw",
       "channel": "Strange Loop Conference",
       "published": "2023-10-13T13:31:01+00:00",
       "thumbnail_url": "https://i3.ytimg.com/vi/V9krYlzSgGk/hqdefault.jpg"
     },
     {
       "id": "nq5C82Nn7XM",
-      "title": "&quot;Oatmeal is Cheap: A Fundamental Theorem for Procedural Generators&quot; by Younès Rabii",
+      "title": "\"Oatmeal is Cheap: A Fundamental Theorem for Procedural Generators\" by Younès Rabii",
       "channel": "Strange Loop Conference",
       "published": "2023-10-13T13:28:05+00:00",
       "thumbnail_url": "https://i3.ytimg.com/vi/nq5C82Nn7XM/hqdefault.jpg"
     },
     {
       "id": "ZQc9-seU-5k",
-      "title": "&quot;Swift as C++ Successor in FoundationDB&quot; by Konrad Malawski (Strange Loop 2023)",
+      "title": "\"Swift as C++ Successor in FoundationDB\" by Konrad Malawski (Strange Loop 2023)",
       "channel": "Strange Loop Conference",
       "published": "2023-10-12T20:58:24+00:00",
       "thumbnail_url": "https://i3.ytimg.com/vi/ZQc9-seU-5k/hqdefault.jpg"
     },
     {
       "id": "MQnVmEw6ISQ",
-      "title": "&quot;Supporting Data Journalism through Compilers for Visual Inputs&quot; by Parker Ziegler",
+      "title": "\"Supporting Data Journalism through Compilers for Visual Inputs\" by Parker Ziegler",
       "channel": "Strange Loop Conference",
       "published": "2023-10-12T17:23:20+00:00",
       "thumbnail_url": "https://i2.ytimg.com/vi/MQnVmEw6ISQ/hqdefault.jpg"
     },
     {
       "id": "Jv2JgzAl5yU",
-      "title": "&quot;Computational Physics, Beyond the Glass&quot; by Sam Ritchie (Strange Loop 2023)",
+      "title": "\"Computational Physics, Beyond the Glass\" by Sam Ritchie (Strange Loop 2023)",
       "channel": "Strange Loop Conference",
       "published": "2023-10-12T17:18:23+00:00",
       "thumbnail_url": "https://i3.ytimg.com/vi/Jv2JgzAl5yU/hqdefault.jpg"
     },
     {
       "id": "Gx2mDuVAClo",
-      "title": "&quot;Is my Large Language Model a Strange Loop?&quot; by Zac Hatfield-Dodds (Strange Loop 2023)",
+      "title": "\"Is my Large Language Model a Strange Loop?\" by Zac Hatfield-Dodds (Strange Loop 2023)",
       "channel": "Strange Loop Conference",
       "published": "2023-10-12T13:53:39+00:00",
       "thumbnail_url": "https://i4.ytimg.com/vi/Gx2mDuVAClo/hqdefault.jpg"
     },
     {
       "id": "APNV_0I7nbs",
-      "title": "&quot;A JVM threading model for the containerized times&quot; by Luiz Hespanha and Flavio Brasil",
+      "title": "\"A JVM threading model for the containerized times\" by Luiz Hespanha and Flavio Brasil",
       "channel": "Strange Loop Conference",
       "published": "2023-10-12T13:39:55+00:00",
       "thumbnail_url": "https://i2.ytimg.com/vi/APNV_0I7nbs/hqdefault.jpg"
     },
     {
       "id": "T3u7bGgVspM",
-      "title": "&quot;An approach to computing and sustainability inspired from permaculture&quot; by Devine Lu Linvega",
+      "title": "\"An approach to computing and sustainability inspired from permaculture\" by Devine Lu Linvega",
       "channel": "Strange Loop Conference",
       "published": "2023-10-11T20:09:41+00:00",
       "thumbnail_url": "https://i1.ytimg.com/vi/T3u7bGgVspM/hqdefault.jpg"
     },
     {
       "id": "1cRFfYQYGxE",
-      "title": "&quot;From Geometry to Algebra and Back Again: 4000 Years of Papers&quot; by Jack Rusher",
+      "title": "\"From Geometry to Algebra and Back Again: 4000 Years of Papers\" by Jack Rusher",
       "channel": "Strange Loop Conference",
       "published": "2023-10-11T16:06:47+00:00",
       "thumbnail_url": "https://i2.ytimg.com/vi/1cRFfYQYGxE/hqdefault.jpg"
     },
     {
       "id": "4_6uboxUYR8",
-      "title": "&quot;War Time Proofs and Futuristic Programs&quot; by Valeria de Paiva",
+      "title": "\"War Time Proofs and Futuristic Programs\" by Valeria de Paiva",
       "channel": "Strange Loop Conference",
       "published": "2023-10-11T14:54:59+00:00",
       "thumbnail_url": "https://i1.ytimg.com/vi/4_6uboxUYR8/hqdefault.jpg"
     },
     {
       "id": "vBUa6mNdKOE",
-      "title": "&quot;Experimentation: putting research papers into prod&quot; by Leemay Nassery",
+      "title": "\"Experimentation: putting research papers into prod\" by Leemay Nassery",
       "channel": "Strange Loop Conference",
       "published": "2023-10-11T14:47:04+00:00",
       "thumbnail_url": "https://i3.ytimg.com/vi/vBUa6mNdKOE/hqdefault.jpg"
     },
     {
       "id": "xOInz_gt2Fg",
-      "title": "&quot;Formal semantics for multi-language programs&quot; by Amal Ahmed",
+      "title": "\"Formal semantics for multi-language programs\" by Amal Ahmed",
       "channel": "Strange Loop Conference",
       "published": "2023-10-10T20:01:11+00:00",
       "thumbnail_url": "https://i1.ytimg.com/vi/xOInz_gt2Fg/hqdefault.jpg"
@@ -365,28 +310,28 @@
     },
     {
       "id": "9Fd4DtsHcmw",
-      "title": "Joe Birr-Pixton &amp; Daniel McCarney: Project Update: &quot;A Decade of Rustls&quot; | RustConf 2026",
+      "title": "Joe Birr-Pixton & Daniel McCarney: Project Update: \"A Decade of Rustls\" | RustConf 2026",
       "channel": "Rust Foundation",
       "published": "2026-10-01T18:25:24+00:00",
       "thumbnail_url": "https://i2.ytimg.com/vi/9Fd4DtsHcmw/hqdefault.jpg"
     },
     {
       "id": "QrMG606ho5k",
-      "title": "Dean Little: Sponsor Lightning Talk: &quot;Rustc: How I Learned to Respect the Compiler&quot; | RustConf 2026",
+      "title": "Dean Little: Sponsor Lightning Talk: \"Rustc: How I Learned to Respect the Compiler\" | RustConf 2026",
       "channel": "Rust Foundation",
       "published": "2026-10-01T18:25:24+00:00",
       "thumbnail_url": "https://i2.ytimg.com/vi/QrMG606ho5k/hqdefault.jpg"
     },
     {
       "id": "X-_jLdNrufQ",
-      "title": "Jon Seager: Keynote: &quot;Rust Adoption at Scale With Ubuntu&quot; | RustConf 2026",
+      "title": "Jon Seager: Keynote: \"Rust Adoption at Scale With Ubuntu\" | RustConf 2026",
       "channel": "Rust Foundation",
       "published": "2026-10-01T18:25:24+00:00",
       "thumbnail_url": "https://i1.ytimg.com/vi/X-_jLdNrufQ/hqdefault.jpg"
     },
     {
       "id": "aaQhGsXxluM",
-      "title": "Emma Forman Ling: Sponsor Lightning Talk: &quot;Scaling Infrastructure With Confidence in the Age of AI&quot;",
+      "title": "Emma Forman Ling: Sponsor Lightning Talk: \"Scaling Infrastructure With Confidence in the Age of AI\"",
       "channel": "Rust Foundation",
       "published": "2026-10-01T18:25:24+00:00",
       "thumbnail_url": "https://i2.ytimg.com/vi/aaQhGsXxluM/hqdefault.jpg"
@@ -400,70 +345,70 @@
     },
     {
       "id": "r31I4eDU104",
-      "title": "Tomáš Šedovič: Project Update: &quot;Bringing Rust into Python&quot; | RustConf 2026",
+      "title": "Tomáš Šedovič: Project Update: \"Bringing Rust into Python\" | RustConf 2026",
       "channel": "Rust Foundation",
       "published": "2026-10-01T18:25:24+00:00",
       "thumbnail_url": "https://i3.ytimg.com/vi/r31I4eDU104/hqdefault.jpg"
     },
     {
       "id": "w_1t9ELY6SE",
-      "title": "Lisa Crossman: &quot;Good or Bad Vibes? Coding with AI in Rust&quot; | RustConf 2026",
+      "title": "Lisa Crossman: \"Good or Bad Vibes? Coding with AI in Rust\" | RustConf 2026",
       "channel": "Rust Foundation",
       "published": "2026-10-01T18:25:24+00:00",
       "thumbnail_url": "https://i4.ytimg.com/vi/w_1t9ELY6SE/hqdefault.jpg"
     },
     {
       "id": "ncyHIrXFFAo",
-      "title": "Melih Elibol: &quot;Fearless Concurrency on the GPU&quot; | RustConf 2026",
+      "title": "Melih Elibol: \"Fearless Concurrency on the GPU\" | RustConf 2026",
       "channel": "Rust Foundation",
       "published": "2026-10-01T18:24:06+00:00",
       "thumbnail_url": "https://i3.ytimg.com/vi/ncyHIrXFFAo/hqdefault.jpg"
     },
     {
       "id": "ocHrWQKDuZ0",
-      "title": "Daniel Almeida: &quot;Tyr: A New Rust GPU Driver for the Linux Kernel&quot; | RustConf 2026",
+      "title": "Daniel Almeida: \"Tyr: A New Rust GPU Driver for the Linux Kernel\" | RustConf 2026",
       "channel": "Rust Foundation",
       "published": "2026-10-01T18:24:06+00:00",
       "thumbnail_url": "https://i4.ytimg.com/vi/ocHrWQKDuZ0/hqdefault.jpg"
     },
     {
       "id": "pbJ9P8rnegU",
-      "title": "Ian McIntyre: Lightning Talk: &quot;Using the Rust Standard Library on High-End MCUs&quot; | RustConf 2026",
+      "title": "Ian McIntyre: Lightning Talk: \"Using the Rust Standard Library on High-End MCUs\" | RustConf 2026",
       "channel": "Rust Foundation",
       "published": "2026-10-01T18:24:06+00:00",
       "thumbnail_url": "https://i1.ytimg.com/vi/pbJ9P8rnegU/hqdefault.jpg"
     },
     {
       "id": "rOR6JBsSnck",
-      "title": "Felipe Monteiro: &quot;Verifying the Rust Standard Library&quot; | RustConf 2026",
+      "title": "Felipe Monteiro: \"Verifying the Rust Standard Library\" | RustConf 2026",
       "channel": "Rust Foundation",
       "published": "2026-10-01T18:24:06+00:00",
       "thumbnail_url": "https://i3.ytimg.com/vi/rOR6JBsSnck/hqdefault.jpg"
     },
     {
       "id": "sq7RvPdpZeQ",
-      "title": "Rakhi Sharma: &quot;Servo Devtools: Where Rust Meets JavaScript&quot; | RustConf 2026",
+      "title": "Rakhi Sharma: \"Servo Devtools: Where Rust Meets JavaScript\" | RustConf 2026",
       "channel": "Rust Foundation",
       "published": "2026-10-01T18:24:06+00:00",
       "thumbnail_url": "https://i4.ytimg.com/vi/sq7RvPdpZeQ/hqdefault.jpg"
     },
     {
       "id": "tk3tgkPZQfM",
-      "title": "Craig Hamilton: Lightning Talk: &quot;Zero-copy Transfers with io_uring and Rust&quot; | RustConf 2026",
+      "title": "Craig Hamilton: Lightning Talk: \"Zero-copy Transfers with io_uring and Rust\" | RustConf 2026",
       "channel": "Rust Foundation",
       "published": "2026-10-01T18:24:06+00:00",
       "thumbnail_url": "https://i1.ytimg.com/vi/tk3tgkPZQfM/hqdefault.jpg"
     },
     {
       "id": "yWZm26aAOLA",
-      "title": "Ian McCormack: &quot;BorrowSanitizer: Securing Rust Across Foreign Function Boundaries&quot; | RustConf 2026",
+      "title": "Ian McCormack: \"BorrowSanitizer: Securing Rust Across Foreign Function Boundaries\" | RustConf 2026",
       "channel": "Rust Foundation",
       "published": "2026-10-01T18:24:06+00:00",
       "thumbnail_url": "https://i2.ytimg.com/vi/yWZm26aAOLA/hqdefault.jpg"
     },
     {
       "id": "F1xrcb1Dbwc",
-      "title": "mini squawk: a day in nyc with tess &amp; ush",
+      "title": "mini squawk: a day in nyc with tess & ush",
       "channel": "two bangs",
       "published": "2022-06-09T04:32:47+00:00",
       "thumbnail_url": "https://i3.ytimg.com/vi/F1xrcb1Dbwc/hqdefault.jpg"
@@ -540,7 +485,7 @@
     },
     {
       "id": "zMYZ5MFQAho",
-      "title": "Inside C++'s Biggest Challenge | Panel Discussion with Bjarne Stroustrup, Herb Sutter &amp; More",
+      "title": "Inside C++'s Biggest Challenge | Panel Discussion with Bjarne Stroustrup, Herb Sutter & More",
       "channel": "CppCon",
       "published": "2026-06-27T19:00:06+00:00",
       "thumbnail_url": "https://i3.ytimg.com/vi/zMYZ5MFQAho/hqdefault.jpg"
@@ -778,28 +723,28 @@
     },
     {
       "id": "lYtNkiqvYV4",
-      "title": "Alex Snaps - Enable all your infrastructure’s power with Rust &amp; Wasm",
+      "title": "Alex Snaps - Enable all your infrastructure’s power with Rust & Wasm",
       "channel": "LambdaConf",
       "published": "2025-07-07T13:46:05+00:00",
       "thumbnail_url": "https://i1.ytimg.com/vi/lYtNkiqvYV4/hqdefault.jpg"
     },
     {
       "id": "YKfAtuvsUR4",
-      "title": "Nasi Chaudhari - AI Meets Serverless: Automating Receipt Intelligence with AWS Lambda &amp; Textract",
+      "title": "Nasi Chaudhari - AI Meets Serverless: Automating Receipt Intelligence with AWS Lambda & Textract",
       "channel": "LambdaConf",
       "published": "2025-07-07T13:45:09+00:00",
       "thumbnail_url": "https://i2.ytimg.com/vi/YKfAtuvsUR4/hqdefault.jpg"
     },
     {
       "id": "fxqRcgbXAHY",
-      "title": "Martin Förtsch &amp; Thomas Endres - AI'll Be Back: Exploring Diffusion Models for Image, Audio &amp; Video",
+      "title": "Martin Förtsch & Thomas Endres - AI'll Be Back: Exploring Diffusion Models for Image, Audio & Video",
       "channel": "LambdaConf",
       "published": "2025-07-03T13:42:07+00:00",
       "thumbnail_url": "https://i3.ytimg.com/vi/fxqRcgbXAHY/hqdefault.jpg"
     },
     {
       "id": "hWhxIYNl1T8",
-      "title": "John De Goes - Euphoric Codecs &amp; Dazzling Rainbows",
+      "title": "John De Goes - Euphoric Codecs & Dazzling Rainbows",
       "channel": "LambdaConf",
       "published": "2025-06-30T13:43:13+00:00",
       "thumbnail_url": "https://i1.ytimg.com/vi/hWhxIYNl1T8/hqdefault.jpg"
@@ -981,14 +926,14 @@
     },
     {
       "id": "wCWmpQoa6qo",
-      "title": "What's new in gRPC Observability - Eric Anderson &amp; Madhav Bissa, Google",
+      "title": "What's new in gRPC Observability - Eric Anderson & Madhav Bissa, Google",
       "channel": "CNCF [Cloud Native Computing Foundation]",
       "published": "2026-10-01T21:46:42+00:00",
       "thumbnail_url": "https://i4.ytimg.com/vi/wCWmpQoa6qo/hqdefault.jpg"
     },
     {
       "id": "LfsbC9CayA8",
-      "title": "gRPC-Python: Major Feature Updates - Sreenithi Sridharan &amp; Sergii Tkachenko, Google",
+      "title": "gRPC-Python: Major Feature Updates - Sreenithi Sridharan & Sergii Tkachenko, Google",
       "channel": "CNCF [Cloud Native Computing Foundation]",
       "published": "2026-10-01T21:46:39+00:00",
       "thumbnail_url": "https://i1.ytimg.com/vi/LfsbC9CayA8/hqdefault.jpg"
@@ -1023,14 +968,14 @@
     },
     {
       "id": "RZyy529VwFU",
-      "title": "How Netflix Leverages gRPC for Resilience at Scale - Olivia Bronstein &amp; Umair Khan, Netflix",
+      "title": "How Netflix Leverages gRPC for Resilience at Scale - Olivia Bronstein & Umair Khan, Netflix",
       "channel": "CNCF [Cloud Native Computing Foundation]",
       "published": "2026-10-01T21:46:39+00:00",
       "thumbnail_url": "https://i3.ytimg.com/vi/RZyy529VwFU/hqdefault.jpg"
     },
     {
       "id": "W5QAf2YrVg0",
-      "title": "High-Performance gRPC Beyond HTTP/2 - Thiyagarajan Velappan &amp; Ravi Cherukuru, Mastercard",
+      "title": "High-Performance gRPC Beyond HTTP/2 - Thiyagarajan Velappan & Ravi Cherukuru, Mastercard",
       "channel": "CNCF [Cloud Native Computing Foundation]",
       "published": "2026-10-01T21:46:39+00:00",
       "thumbnail_url": "https://i4.ytimg.com/vi/W5QAf2YrVg0/hqdefault.jpg"
@@ -1051,7 +996,7 @@
     },
     {
       "id": "j6OHoaiVe7Q",
-      "title": "Stan Getz &amp; Charlie Byrd - Samba de uma Nota Só",
+      "title": "Stan Getz & Charlie Byrd - Samba de uma Nota Só",
       "channel": "USENIX",
       "published": "2019-12-05T08:07:45+00:00",
       "thumbnail_url": "https://i3.ytimg.com/vi/j6OHoaiVe7Q/hqdefault.jpg"
@@ -1268,7 +1213,7 @@
     },
     {
       "id": "ZUk2TKZIo7s",
-      "title": "AI &amp; The University - Carson Gross | SSW 2026",
+      "title": "AI & The University - Carson Gross | SSW 2026",
       "channel": "Software Should Work",
       "published": "2026-08-07T13:56:31+00:00",
       "thumbnail_url": "https://i3.ytimg.com/vi/ZUk2TKZIo7s/hqdefault.jpg"

@@ -6,6 +6,7 @@ const VERSION_KEY = 'dvr:version';
 const CURRENT_KEY = 'dvr:current';
 const PROGRESS_KEY = 'dvr:progress';
 const COMPLETED_KEY = 'dvr:completed';
+const OFFERED_KEY = 'dvr:offered';
 
 // Bump this when the on-disk shape changes. A returning user with a stale
 // version gets a fresh state rather than a crash.
@@ -14,7 +15,7 @@ export const STATE_VERSION = '1';
 /**
  * Read the user's state. Discards and replaces with defaults if the stored
  * version does not match STATE_VERSION.
- * @returns {{version: string, current: string|null, progress: Object<string, number>, completed: string[]}}
+ * @returns {{version: string, current: string|null, progress: Object<string, number>, completed: string[], offered: string|null}}
  */
 export function readState() {
   const v = localStorage.getItem(VERSION_KEY);
@@ -24,14 +25,17 @@ export function readState() {
     localStorage.removeItem(CURRENT_KEY);
     localStorage.removeItem(PROGRESS_KEY);
     localStorage.removeItem(COMPLETED_KEY);
+    localStorage.removeItem(OFFERED_KEY);
     localStorage.setItem(VERSION_KEY, STATE_VERSION);
   }
   const currentRaw = localStorage.getItem(CURRENT_KEY);
+  const offeredRaw = localStorage.getItem(OFFERED_KEY);
   const progressRaw = localStorage.getItem(PROGRESS_KEY);
   const completedRaw = localStorage.getItem(COMPLETED_KEY);
   return {
     version: STATE_VERSION,
     current: currentRaw || null,
+    offered: offeredRaw || null,
     progress: progressRaw ? safeJson(progressRaw, {}) : {},
     completed: completedRaw ? safeJson(completedRaw, []) : [],
   };
@@ -40,12 +44,16 @@ export function readState() {
 /**
  * Merge a partial state into localStorage. Keys not present in `partial`
  * are left alone.
- * @param {{current?: string|null, progress?: Object, completed?: string[]}} partial
+ * @param {{current?: string|null, progress?: Object, completed?: string[], offered?: string|null}} partial
  */
 export function writeState(partial) {
   if ('current' in partial) {
     if (partial.current == null) localStorage.removeItem(CURRENT_KEY);
     else localStorage.setItem(CURRENT_KEY, partial.current);
+  }
+  if ('offered' in partial) {
+    if (partial.offered == null) localStorage.removeItem(OFFERED_KEY);
+    else localStorage.setItem(OFFERED_KEY, partial.offered);
   }
   if ('progress' in partial) {
     localStorage.setItem(PROGRESS_KEY, JSON.stringify(partial.progress));

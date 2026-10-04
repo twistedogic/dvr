@@ -21,11 +21,13 @@ window.onYouTubeIframeAPIReady = () => {
 /**
  * Build a player in `container` for `videoId`. `onEnded` fires on ENDED.
  * If a previous player was attached to `container`, it is destroyed first.
+ * `resumeFraction` (0..1) seeks once to fraction * duration once the
+ * duration is known; see shouldSeek for the threshold.
  *
- * @param {{videoId: string, container: HTMLElement, onEnded: () => void, startSeconds?: number}} args
+ * @param {{videoId: string, container: HTMLElement, onEnded: () => void, resumeFraction?: number}} args
  * @returns {YT.Player | null}
  */
-export function loadTalk({ videoId, container, onEnded, startSeconds = 0 }) {
+export function loadTalk({ videoId, container, onEnded, resumeFraction = 0 }) {
   const run = () => {
     destroyContainer(container);
     // YT.Player wants a fresh DOM node with an id.
@@ -33,6 +35,17 @@ export function loadTalk({ videoId, container, onEnded, startSeconds = 0 }) {
     const div = document.createElement('div');
     div.id = id;
     container.appendChild(div);
+    // Seek exactly once, when the duration is finally known. getDuration()
+    // can report 0 at onReady, so the first playing/buffering event retries.
+    let seeked = false;
+    const trySeek = (target) => {
+      if (seeked || !shouldSeek(resumeFraction)) return;
+      const d = typeof target.getDuration === 'function' ? (target.getDuration() || 0) : 0;
+      if (d > 0) {
+        seeked = true;
+        try { target.seekTo(resumeFraction * d, true); } catch {}
+      }
+    };
     // eslint-disable-next-line no-undef
     return new YT.Player(div, {
       videoId,
@@ -48,13 +61,14 @@ export function loadTalk({ videoId, container, onEnded, startSeconds = 0 }) {
       },
       events: {
         onReady: (ev) => {
-          if (startSeconds > 0) {
-            try { ev.target.seekTo(startSeconds, true); } catch {}
-          }
+          trySeek(ev.target);
         },
         onStateChange: (ev) => {
           // YT.PlayerState.ENDED === 0
           if (ev && ev.data === 0) onEnded();
+          // PLAYING === 1, BUFFERING === 3: retry the resume seek if the
+          // duration was not known at onReady.
+          if (ev && (ev.data === 1 || ev.data === 3)) trySeek(ev.target);
         },
       },
     });
@@ -77,6 +91,18 @@ export function destroyContainer(container) {
   // just clear the children. YT cleans up its own listeners on iframe
   // removal.
   while (container.firstChild) container.removeChild(container.firstChild);
+}
+
+/**
+ * Whether a stored playback fraction is worth seeking to on resume.
+ * Below 2% the offset is resume noise (seconds into a talk); 1.0 never
+ * persists (completed talks are removed from progress flow) but is
+ * guarded anyway.
+ *
+ * @param {number} fraction
+ */
+export function shouldSeek(fraction) {
+  return fraction >= 0.02 && fraction < 1;
 }
 
 /**

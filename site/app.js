@@ -12,6 +12,7 @@ import { loadTalk, destroyContainer, progressFraction } from './player.js';
 
 const root = document.getElementById('app');
 let catalog = null; // {talks}
+let progressTimer = null; // the 5s progress poll; at most one at a time
 
 // --- catalog loading ---
 
@@ -24,6 +25,10 @@ async function loadCatalog() {
 // --- views ---
 
 function clear() {
+  if (progressTimer) {
+    clearInterval(progressTimer);
+    progressTimer = null;
+  }
   destroyContainer(document.getElementById('player-frame'));
   while (root.firstChild) root.removeChild(root.firstChild);
 }
@@ -90,17 +95,14 @@ function renderPlaying(talk) {
   root.appendChild(frame);
 
   const state = readState();
-  // v1 has no duration in the catalog (rejected length split, RSS has no
-  // duration field), so we cannot compute a real startSeconds here. The
-  // player is seeked to 0 and progress is restored only as a fraction in
-  // the polling loop. When duration is reintroduced, multiply the fraction
-  // by talk duration here.
-  const startSeconds = 0;
+  // Resume by fraction: the player reports its own duration at runtime,
+  // so no catalog duration field is needed (design D3).
+  const resumeFraction = state.progress[talk.id] || 0;
 
   const player = loadTalk({
     videoId: talk.id,
     container: frame,
-    startSeconds,
+    resumeFraction,
     onEnded: () => handleEnded(talk),
   });
 
@@ -123,8 +125,10 @@ function handleEnded(talk) {
     root.appendChild(msg);
     return;
   }
-  setCurrent(next.id);
-  renderPlaying(next);
+  // Return to IDLE with the next pick as the persisted offer; the next
+  // play is user-initiated (spec: end-of-talk transition).
+  writeState({ offered: next.id });
+  renderIdle(next);
 }
 
 function renderBrowse() {
@@ -187,7 +191,8 @@ function startProgressPolling(talk, player) {
     }
   };
   // poll every 5s; the first tick waits 5s too, which is fine.
-  setInterval(tick, 5000);
+  if (progressTimer) clearInterval(progressTimer);
+  progressTimer = setInterval(tick, 5000);
 }
 
 // --- entry point ---
@@ -212,7 +217,17 @@ async function main() {
     // Stale id - clear it and fall through to IDLE.
     setCurrent(null);
   }
-  const t = pickRandom(catalog, new Set(s.completed));
+  const completed = new Set(s.completed);
+  let t = null;
+  if (s.offered && !completed.has(s.offered)) {
+    t = (catalog.talks || []).find((x) => x.id === s.offered);
+  }
+  if (!t) {
+    // No valid offer: draw a fresh pick and persist it, so a reload
+    // re-offers the same talk instead of re-rolling.
+    t = pickRandom(catalog, completed);
+    if (t) writeState({ offered: t.id });
+  }
   if (!t) {
     clear();
     root.appendChild(h1());

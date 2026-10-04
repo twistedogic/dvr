@@ -96,3 +96,30 @@ test('pickRandom falls back to the full set when nothing is unwatched', () => {
   assert.ok(t);
   assert.ok(['a', 'b'].includes(t.id));
 });
+
+test('offered round-trips through writeState/readState', () => {
+  clear();
+  state.writeState({ offered: 'talk9' });
+  assert.equal(state.readState().offered, 'talk9');
+  assert.equal(localStorage.getItem('dvr:offered'), 'talk9');
+});
+
+test('writeState({offered: null}) removes the key', () => {
+  clear();
+  state.writeState({ offered: 'talk9' });
+  state.writeState({ offered: null });
+  assert.equal(localStorage.getItem('dvr:offered'), null);
+  assert.equal(state.readState().offered, null);
+});
+
+test('readState defaults offered to null when absent', () => {
+  clear();
+  assert.equal(state.readState().offered, null);
+});
+
+test('readState discards offered when dvr:version does not match', () => {
+  clear();
+  localStorage.setItem('dvr:version', 'stale-version');
+  localStorage.setItem('dvr:offered', 'gone');
+  assert.equal(state.readState().offered, null);
+});

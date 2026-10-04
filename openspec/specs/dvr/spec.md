@@ -33,13 +33,15 @@ channels, and SHALL exclude Shorts and non-talk uploads.
 
 The system SHALL maintain one of two states for the user session: `IDLE`
 (no talk in progress) or `PLAYING` (a talk is the current one). The
-current talk and its progress SHALL be persisted in `localStorage` under
-a versioned key. In `IDLE` the home view SHALL show exactly one random
-talk from the set of talks the user has not yet completed, with a single
-primary action to begin playing it, and an unobtrusive link to a
-full-catalog browse view. In `PLAYING` the home view SHALL show the
-player and SHALL NOT expose the catalog or a way to start a different
-talk.
+current talk, its progress, and the talk offered in `IDLE` SHALL be
+persisted in `localStorage` under a versioned key. In `IDLE` the home
+view SHALL show exactly one random talk from the set of talks the user
+has not yet completed, with a single primary action to begin playing it,
+and an unobtrusive link to a full-catalog browse view. The offered talk
+SHALL itself be persisted: reloading or refreshing while in `IDLE`
+restores the same offer rather than drawing a new random talk. In
+`PLAYING` the home view SHALL show the player and SHALL NOT expose the
+catalog or a way to start a different talk.
 
 #### Scenario: Fresh user starts a talk
 - **WHEN** a user with no prior session opens the PWA
@@ -51,10 +53,16 @@ talk.
 - **THEN** the home view shows only that talk's player; the catalog, the
   random suggestion, and any "play another" action are not visible.
 
+#### Scenario: Refresh in IDLE re-offers the same talk
+- **WHEN** the user reloads or pull-to-refreshes the PWA while in `IDLE`
+  with an unplayed offer
+- **THEN** the home view shows the same offered talk again; no new random
+  draw occurs, so refreshing cannot be used to farm suggestions.
+
 #### Scenario: State survives reload
 - **WHEN** the user reloads the PWA
-- **THEN** the previous state (`IDLE` or `PLAYING`, with current talk id
-  and progress) is restored from `localStorage`.
+- **THEN** the previous state (`IDLE` with its offered talk, or `PLAYING`
+  with current talk id and progress) is restored from `localStorage`.
 
 ### Requirement: Trapped-until-complete playback
 
@@ -86,24 +94,28 @@ reload, partial progress, etc.).
 - **WHEN** the user is in `PLAYING`
 - **THEN** the YouTube IFrame player offers its native 2x speed control.
 
-### Requirement: Auto-advance on completion
+### Requirement: End-of-talk transition
 
-When a talk reaches completion while the user is still on the home view,
-the system SHALL automatically load the next randomly chosen unwatched
-talk without requiring a click. The auto-advance SHALL destroy the
-finished player and instantiate a fresh player for the new talk, so
-that the YouTube end-screen and "More videos" UI never render.
+When the current talk reaches completion, the system SHALL mark it
+complete, destroy the player immediately (so the YouTube end-screen and
+"More videos" UI never render), return the user to `IDLE`, and show the
+next randomly chosen unwatched talk as the persisted offer. The next
+play SHALL be initiated by the user, not automatically.
 
-#### Scenario: Auto-advance prevents YouTube end-screen
-- **WHEN** a talk reaches ENDED
-- **THEN** the YouTube IFrame is destroyed and a new IFrame is created
-  for the next talk within the same page lifecycle, so the end-screen
-  suggestion panel is not visible at any point.
+#### Scenario: End-screen never renders
+- **WHEN** the current talk reaches ENDED
+- **THEN** the YouTube IFrame is destroyed within the same page lifecycle
+  before the end-screen suggestion panel can become visible.
 
-#### Scenario: Auto-advance picks from unwatched
-- **WHEN** auto-advance selects the next talk
-- **THEN** the chosen talk is drawn uniformly at random from the set
-  of catalog entries not in the user's `completed` set.
+#### Scenario: Completion returns to IDLE with a fresh offer
+- **WHEN** the current talk reaches ENDED
+- **THEN** the app marks it complete, returns to `IDLE`, and shows one
+  new random talk from the now-unwatched set, persisted as the offer.
+
+#### Scenario: Next play is user-initiated
+- **WHEN** the app returns to `IDLE` after a talk completes
+- **THEN** no player is instantiated for the offered talk until the user
+  presses the primary play action.
 
 ### Requirement: Single-pick browse escape
 
@@ -143,8 +155,11 @@ or any user input other than what the user chooses to watch.
 The site SHALL include a Web App Manifest and a service worker. The
 service worker SHALL cache the app shell, `catalog.json`, and thumbnail
 images so that the catalog and the IDLE home view load while offline.
-Playing a video while offline SHALL fail gracefully (the player cannot
-stream without network) and SHALL NOT crash the app.
+The app-shell cache name SHALL be changed whenever a release changes the
+contents of cached shell files, so that returning users receive updated
+shell code instead of a permanently stale copy. Playing a video while
+offline SHALL fail gracefully (the player cannot stream without network)
+and SHALL NOT crash the app.
 
 #### Scenario: Installable on supported browsers
 - **WHEN** a supported browser (Chrome, Edge, Firefox, Safari iOS) visits
@@ -159,25 +174,44 @@ stream without network) and SHALL NOT crash the app.
   random suggestion; playing a talk shows a "needs network" message
   instead of crashing.
 
+#### Scenario: Shell updates reach returning users
+- **WHEN** a release changes cached app-shell files and bumps the
+  service worker's shell cache name
+- **THEN** a returning visitor's next page load is served the updated
+  shell code, not the copy frozen at their first visit.
+
 ### Requirement: Persistence keys and migration safety
 
-`localStorage` SHALL store three keys for the user's session state:
+`localStorage` SHALL store four keys for the user's session state:
 `dvr:current` (the id of the talk in progress, or absent), `dvr:progress`
-(map of talk id to last reported playback fraction in `[0, 1)`), and
-`dvr:completed` (set of talk ids the user has finished). A `dvr:version`
-key SHALL be present and used to migrate or discard old state if the
-shape of the stored values changes between releases.
+(map of talk id to last reported playback fraction in `[0, 1)`),
+`dvr:completed` (set of talk ids the user has finished), and
+`dvr:offered` (the id of the talk offered in `IDLE`, or absent). A
+`dvr:version` key SHALL be present and used to migrate or discard old
+state if the shape of the stored values changes between releases.
 
 #### Scenario: Completed set shrinks the random pool
 - **WHEN** a talk is marked complete
 - **THEN** it is excluded from future random suggestions in subsequent
   `IDLE` sessions.
 
+#### Scenario: Offered talk survives reload
+- **WHEN** the app starts and `dvr:current` is absent but `dvr:offered`
+  names a talk present in the catalog and not in `dvr:completed`
+- **THEN** the `IDLE` view shows that talk without drawing a new random
+  pick.
+
+#### Scenario: Invalid offer is replaced
+- **WHEN** the app starts and `dvr:offered` names a talk that is missing
+  from the catalog or already in `dvr:completed`
+- **THEN** the app draws a fresh random unwatched talk, persists it as
+  the new offer, and shows it.
+
 #### Scenario: Version mismatch resets state
 - **WHEN** the app reads a `dvr:version` that does not match the running
   build
-- **THEN** the app discards the stale state and starts fresh (no
-  partial talks, no completed set) rather than crashing.
+- **THEN** the app discards the stale state and starts fresh (no partial
+  talks, no completed set) rather than crashing.
 
 ### Requirement: Progress is written while a talk is playing
 The system SHALL write the playback fraction of the current talk to
