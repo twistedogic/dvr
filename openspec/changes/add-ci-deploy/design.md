@@ -107,8 +107,16 @@ directory.
   → Mitigation: the test job still runs on PRs and gates the merge
   via the GitHub branch-protection setting (which the user can
   enable in repo Settings). Adding real previews is a future change.
-- **Stuck deploys.** If a deploy step fails mid-flight, the next
-  push can re-run it. No state is held between runs.
+- **Re-running the failed deploy job can leave duplicate
+  `github-pages` artifacts in the same run.** `actions/upload-pages-artifact`
+  does not overwrite - it appends. A second attempt in the same
+  run sees two artifacts named `github-pages` and
+  `actions/deploy-pages` errors with "Multiple artifacts named
+  'github-pages' were unexpectedly found." → Mitigation: the deploy
+  job has a pre-upload step that deletes any existing
+  `github-pages` artifact in the same run via `actions/github-script`
+  (requires `actions: write` permission). This makes re-runs safe
+  and idempotent.
 - **The `GITHUB_TOKEN` for the deploy step is scoped to the
   `github-pages` environment** for the `pages: write` and
   `id-token: write` permissions, not for the whole repo. This is

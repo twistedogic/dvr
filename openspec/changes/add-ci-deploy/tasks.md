@@ -16,4 +16,12 @@
 
 - [x] 3.1 Commit the workflow change and the prior-artifact updates in one commit
 - [x] 3.2 Push to `origin main` and verify `git status` shows the branch is up to date
-- [ ] 3.3 (User) In GitHub repo Settings -> Pages, change Source to "GitHub Actions" so the first deploy job can publish (first attempt failed at the deploy step with 404 "Ensure GitHub Pages has been enabled"; confirmed via `gh api repos/twistedogic/dvr/pages` that Pages is not yet configured on the repo)
+- [x] 3.3 Pages enabled on the repo: `gh api repos/twistedogic/dvr/pages` returns `build_type: "workflow"` and `html_url: https://twistedogic.github.io/dvr/`
+
+## 4. Re-run robustness fix
+
+- [x] 4.1 Add a pre-upload step in the `deploy` job that deletes any existing `github-pages` artifact in the same workflow run via `actions/github-script@v7` (re-runs of the failed deploy job were leaving duplicate artifacts)
+- [x] 4.2 Add `actions: write` to the deploy job's `permissions:` block (required by `actions/github-script` to delete artifacts)
+- [x] 4.3 Delete the two stale `github-pages` artifacts on run 37172008628 via `gh api -X DELETE` so the next run starts clean
+- [x] 4.4 Update design.md "Risks / Trade-offs" to document the duplicate-artifact failure mode and the mitigation
+- [ ] 4.5 Push the workflow fix; observe the next run deploy successfully
