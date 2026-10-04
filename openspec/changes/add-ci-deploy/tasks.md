@@ -24,4 +24,4 @@
 - [x] 4.2 Add `actions: write` to the deploy job's `permissions:` block (required by `actions/github-script` to delete artifacts)
 - [x] 4.3 Delete the two stale `github-pages` artifacts on run 37172008628 via `gh api -X DELETE` so the next run starts clean
 - [x] 4.4 Update design.md "Risks / Trade-offs" to document the duplicate-artifact failure mode and the mitigation
-- [ ] 4.5 Push the workflow fix; observe the next run deploy successfully
+- [x] 4.5 Push the workflow fix; observe the next run deploy successfully (run 37173598320: test ✓, deploy ✓; https://twistedogic.github.io/dvr/ returns 200)
