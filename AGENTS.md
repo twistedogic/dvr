@@ -1,61 +1,96 @@
-# Repository Guidelines
+# dvr — agent guide
 
-This repository follows a spec-driven workflow managed by the [OpenSpec](https://github.com/Fission-AI/OpenSpec) CLI. All changes flow through artifacts in `openspec/` before any work is implemented.
+`dvr` is an **anti-doomscroll PWA**: one curated tech-conference talk at a time,
+no autoplay-next, no Shorts, no recommendations, no comments. Static + YouTube
+embed + service worker. Catalog is hand-curated from 14 org-owned conference
+channels (`scripts/channels.txt`), built offline with `scripts/build-catalog.mjs`,
+and committed to the repo. Deployed to GitHub Pages from `site/`.
 
-## Project Structure & Module Organization
+## Runtime architecture
 
-- `openspec/config.yaml` — OpenSpec schema (`spec-driven`) and per-artifact rules. Update `context`, `rules`, and `operations` here to steer AI-authored artifacts.
-- `openspec/specs/` — Authoritative capability specs. Each capability lives in its own subdirectory (e.g. `specs/user-auth/spec.md`) with `## Purpose` and `## Requirements` sections using `### Requirement:` / `#### Scenario:` blocks.
-- `openspec/changes/` — In-flight changes. Each folder holds `proposal.md`, `design.md`, `tasks.md`, and a delta spec at `specs/<capability>/spec.md`.
-- `openspec/changes/archive/` — Completed changes (read-only; populate via `openspec archive`).
-- `.pi/skills/`, `.pi/prompts/` — OpenSpec agent skills and slash-command prompts.
-- `.agents/`, `.codex/` — Reserved for agent tooling; leave untouched unless extending it.
+Vanilla JS + ES modules. No framework, no bundler, no build step — the
+catalog is the only artifact produced by `scripts/`.
 
-## Build, Test, and Development Commands
+```
+site/
+  index.html        shell; loads `app.js` and YouTube's iframe_api  app.js            state machine (IDLE / PLAYING / Browse), view rendering
+  state.js          localStorage helpers (current / progress / completed)
+  player.js         thin wrapper over YT IFrame API; destroys on ENDED
+  sw.js             service worker (stale-while-revalidate catalog + thumbnails)
+  style.css         dark theme, system font stack
+  catalog.json      build output (committed; refresh by hand)
+  icons/            icon-192.png, icon-512.png
+scripts/
+  build-catalog.mjs fetches YouTube RSS, drops Shorts, writes catalog.json
+  channels.txt      hand-maintained allowlist of channel ids  make-icon.py      Python; regenerates the flat-design videotape icon
+```
 
-Run from the repo root using the OpenSpec CLI:
+**State machine** — `IDLE` shows one random unwatched talk + a `Play` button
++ a secondary `Browse all` link. `Play` transitions to `PLAYING` with only
+the YouTube player's own controls plus 2x speed. A talk completes only when
+`currentTime / duration >= 1.0` (ENDED). On completion, the player is
+**destroyed** and a fresh one instantiated for the next random pick — the
+YouTube end-screen and "More videos" UI never render.
 
-- `openspec list --json` — Discover project root and registered changes/specs.
-- `openspec new change "<name>"` — Scaffold a new change folder.
-- `openspec status --change "<name>" --json` — Inspect artifact completion.
-- `openspec validate --change "<name>" --strict` — Validate a single change (the project's primary "test").
-- `openspec validate --strict` — Validate every spec under `openspec/specs/`.
-- `openspec sync specs --change "<name>"` — Merge approved deltas into main specs.
-- `openspec archive --change "<name>"` — Move a deployed change to `archive/`.
+## Design pillars
 
-## Coding Style & Naming Conventions
+- **No third-party requests at runtime** beyond `youtube-nocookie.com` and
+  the thumbnail/icon assets shipped with the PWA. No analytics, telemetry,
+  ads, or web fonts.
+- **No skip, no autoplay-next.** A talk is complete only on ENDED.
+- **Browse is the only back door out of PLAYING.** Picking a different talk
+  from Browse silently abandons the in-progress one — that is the explicit
+  "give up" path. The home view exposes no other exit while a talk plays.
+- **Keep `rel: 0` and `disablekb: 1` in `playerVars`** so YouTube's related
+  videos and keyboard shortcuts stay hidden.
+- **Catalog is hand-curated.** Shorts are filtered by alternate-href
+  substring `/shorts/`. Adding a channel is an edit to `scripts/channels.txt`
+  + a manual catalog rebuild + a commit.
 
-- **YAML** in `openspec/config.yaml` — 2-space indent, lowercase keys, block scalars for multi-line `context:` / `guidance:` text.
-- **Capability names** — lowercase, hyphenated (e.g. `billing`, `identity/sso`).
-- **Change names** — short verb phrases, lowercase, hyphenated (e.g. `add-invoice-export`).
-- **Markdown specs** — ATX headings; every `### Requirement:` followed by at least one `#### Scenario:` with `WHEN ... THEN ...` clauses.
-- Keep proposals under 500 words; break tasks into 1–2 hour chunks (see `openspec/config.yaml` rules).
+## Local dev loop
 
-## Testing Guidelines
+```sh
+# Rebuild catalog (run by hand; not in CI)
+node scripts/build-catalog.mjs scripts/channels.txt site/catalog.json
 
-There is no runtime code in this repo. "Tests" are OpenSpec validations:
+# Run the test suite (CI runs the same command)
+node --test scripts/ site/
 
-- Run `openspec validate --strict` before opening a PR; the command must exit zero.
-- Every `### Requirement` must include at least one Scenario with a deterministic `THEN` outcome.
-- Name scenarios by behavior, not implementation (e.g. `#### Scenario: token expires after 1 hour`).
+# Serve locally
+cd site && python3 -m http.server 8000
 
-## TDD for Implementation
+# Deploy: push to main; .github/workflows/test.yml handles test + Pages deploy
+```
 
-When implementing the tasks in `openspec/changes/<name>/tasks.md`, follow red-green-refactor:
+## Gotchas
 
-1. Write the failing test first; run it and confirm it goes _red_ before touching production code.
-2. Write the minimum production code that turns it _green_.
-3. Refactor with tests green; keep the cases, remove the dead weight.
+- YouTube RSS has **no duration field**, so `catalog.json` has no
+  `duration`. `app.js` seeks to 0 on resume; the fraction in `state.progress`
+  is the only resume signal. When a duration source lands, multiply the
+  fraction by duration in `renderPlaying` (the `// v1 has no duration`
+  comment marks the spot).
+- The icon generator is **Python**, not Node. Run `python3 scripts/make-icon.py`
+  to regenerate `site/icons/`.
+- `localStorage` carries a `dvr:version` key. Bump `STATE_VERSION` in
+  `site/state.js` if the on-disk shape changes; returning users get wiped
+  state instead of a crash.
 
-Completion criterion: every task item in `tasks.md` ships with a passing test, and `openspec validate --strict` still exits zero. For language-specific frameworks, naming, and commands, defer to the downstream project's tooling and the `tdd` skill in this agent's skill list.
+## OpenSpec workflow
 
-## Commit & Pull Request Guidelines
+This repo is spec-driven. Authoritative capabilities live in
+`openspec/specs/` (`dvr`, `dvr-icon`, `ci`, `ci-deploy`); in-flight
+changes live in `openspec/changes/<name>/` and need `proposal.md` +
+`design.md` + `tasks.md` + a delta spec.
 
-- Commit subjects use the change name as a prefix when applicable (e.g. `add-invoice-export: scaffold proposal`).
-- One change per PR; reference the change folder in the PR title.
-- PR description must include a summary, the linked change path (`openspec/changes/<name>/`), and the `openspec validate` exit status.
-- Do not edit files inside `openspec/changes/archive/` directly; use the CLI.
+```sh
+openspec new change "<name>"            # scaffold a change
+openspec validate --change "<name>" --strict  # the project's "test"
+openspec validate --strict              # validate every spec
+openspec sync specs --change "<name>"   # merge delta into main specs
+openspec archive --change "<name>"      # move a deployed change to archive/
+```
 
-## Agent-Specific Instructions
-
-Prefer the bundled skills in `.pi/skills/` (`openspec-propose`, `openspec-apply-change`, `openspec-sync-specs`, `openspec-archive-change`). Treat `openspec/config.yaml` rules as authoritative; planning workflows must not edit project code outside approved change folders.
+Detailed per-artifact rules live in `openspec/config.yaml`. The full skills
+(`openspec-propose`, `openspec-apply-change`, `openspec-sync-specs`,
+`openspec-archive-change`, `openspec-explore`, `openspec-update-change`)
+live in `.pi/skills/` — prefer them over free-handing changes.
