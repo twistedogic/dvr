@@ -11,8 +11,7 @@ import {
 import { loadTalk, destroyContainer, progressFraction } from './player.js';
 
 const root = document.getElementById('app');
-let catalog = null; // {generated_at, channels, talks}
-let currentPlayer = null; // YT.Player handle for progress polling
+let catalog = null; // {talks}
 
 // --- catalog loading ---
 
@@ -25,10 +24,6 @@ async function loadCatalog() {
 // --- views ---
 
 function clear() {
-  if (currentPlayer) {
-    try { currentPlayer.destroy && currentPlayer.destroy(); } catch {}
-    currentPlayer = null;
-  }
   destroyContainer(document.getElementById('player-frame'));
   while (root.firstChild) root.removeChild(root.firstChild);
 }
@@ -95,24 +90,21 @@ function renderPlaying(talk) {
   root.appendChild(frame);
 
   const state = readState();
-  const startSeconds = (state.progress[talk.id] || 0) * (talkDurationGuess(talk) || 0);
+  // v1 has no duration in the catalog (rejected length split, RSS has no
+  // duration field), so we cannot compute a real startSeconds here. The
+  // player is seeked to 0 and progress is restored only as a fraction in
+  // the polling loop. When duration is reintroduced, multiply the fraction
+  // by talk duration here.
+  const startSeconds = 0;
 
-  loadTalk({
+  const player = loadTalk({
     videoId: talk.id,
     container: frame,
     startSeconds,
     onEnded: () => handleEnded(talk),
   });
 
-  // Poll progress every 5 seconds. The handle is reachable via the
-  // iframe's `contentWindow` after the API is ready, but YT also exposes
-  // the player through the API. We poll getCurrentTime by re-querying
-  // the iframe's `playerVars` indirectly: the API stores the player on
-  // the container's first child's `YT.Player` reference. To keep this
-  // simple, we hold the player reference via onReady's first-call hack:
-  // YT stashes it on the iframe window as `YT.Player` instances are
-  // created. We just keep polling frame.firstChild if present.
-  startProgressPolling(talk, frame);
+  startProgressPolling(talk, player);
 }
 
 function handleEnded(talk) {
@@ -185,18 +177,8 @@ function h1() {
   return h;
 }
 
-function talkDurationGuess(_talk) {
-  // We have no duration in v1 (RSS has no duration). The start offset
-  // computation still works because the player will simply not seek
-  // when the user has no progress for this id.
-  return 0;
-}
-
-function startProgressPolling(talk, frame) {
+function startProgressPolling(talk, player) {
   const tick = () => {
-    if (!frame.isConnected) return; // view was navigated away
-    const player = currentPlayer || findPlayerIn(frame);
-    if (player) currentPlayer = player;
     const frac = progressFraction(player);
     if (frac > 0 && frac < 1) {
       const s = readState();
@@ -206,23 +188,6 @@ function startProgressPolling(talk, frame) {
   };
   // poll every 5s; the first tick waits 5s too, which is fine.
   setInterval(tick, 5000);
-}
-
-function findPlayerIn(frame) {
-  // YT.Player stores the player object on the iframe's first child via a
-  // private ref, but it is also reachable through the global YT registry
-  // for the most recently created player. We grab it from the iframe
-  // window's `frames` collection if YT is loaded.
-  // In practice: YT attaches the Player instance to the iframe's
-  // `contentWindow` only after onReady. To avoid a hard dependency on
-  // that internal, we use the documented approach: YT.Player instances
-  // are also cached on the `YT` namespace as `YT.Player.Instance`.
-  // Fall back to `null` if not found.
-  // eslint-disable-next-line no-undef
-  if (typeof YT !== 'undefined' && YT.Player && YT.Player.Instance) {
-    return YT.Player.Instance;
-  }
-  return null;
 }
 
 // --- entry point ---

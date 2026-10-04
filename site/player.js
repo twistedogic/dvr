@@ -6,16 +6,6 @@
 // queue. loadTalk() destroys any previous player, builds a fresh iframe
 // inside `container`, and calls onEnded when the video reaches ENDED.
 
-const PARAMS = [
-  'rel=0', // no related videos
-  'modestbranding=1', // shrink the logo
-  'iv_load_policy=3', // hide annotations
-  'disablekb=1', // no keyboard shortcuts
-  'playsinline=1', // no force-fullscreen on iOS
-  'fs=0', // no fullscreen button
-  'cc_load_policy=0', // no closed captions by default
-].join('&');
-
 const pending = [];
 let apiReady = false;
 
@@ -97,16 +87,8 @@ export function destroyContainer(container) {
  */
 export function progressFraction(player) {
   if (!player || typeof player.getCurrentTime !== 'function') return 0;
-  try {
-    const t = player.getCurrentTime() || 0;
-    const d = player.getDuration() || 0;
-    if (d <= 0) return 0;
-    return Math.min(1, t / d);
-  } catch {
-    return 0;
-  }
+  const t = player.getCurrentTime() || 0;
+  const d = player.getDuration() || 0;
+  if (d <= 0) return 0;
+  return Math.min(1, t / d);
 }
-
-// Unused but exported to keep the option open for a future feature where
-// the player is held as a long-lived reference. (No-op for now.)
-export const PARAMS_STRING = PARAMS;

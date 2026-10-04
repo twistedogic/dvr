@@ -46,6 +46,15 @@ const SAMPLE_WITH_SHORT = SAMPLE_XML.replace(
   <id>yt:video:bbbb2222</id>`,
 );
 
+test('parseFeed decodes HTML entities in titles (&quot; &amp; &lt; &gt; &apos;)', () => {
+  const xml = SAMPLE_XML
+    .replace('Talk One by Alice', '&quot;Talk &amp; One&lt;One&gt;&#39;s&apos; by Alice')
+    .replace('Talk Two by Bob', 'It&apos;s a &lt;test&gt; by Bob');
+  const out = parseFeed(xml);
+  assert.equal(out.talks[0].title, `"Talk & One<One>'s' by Alice`);
+  assert.equal(out.talks[1].title, `It's a <test> by Bob`);
+});
+
 test('parseFeed returns {channel, talks[]} with the expected fields', () => {
   const out = parseFeed(SAMPLE_XML);
   assert.equal(out.channel.id, 'UCabc123');
@@ -66,17 +75,13 @@ test('parseFeed drops entries whose alternate link is a Short', () => {
   }
 });
 
-test('build({feeds}) returns {generated_at, channels, talks} combining all feeds', () => {
+test('build({feeds}) returns {talks} combining all feeds', () => {
   const out = build({
     feeds: [
       { channelId: 'UCabc123', xml: SAMPLE_XML },
       { channelId: 'UCxyz999', xml: SAMPLE_XML.replace(/UCabc123/g, 'UCxyz999').replace(/Test Conference/g, 'Other Conf') },
     ],
   });
-  assert.ok(typeof out.generated_at === 'string' && out.generated_at.length > 0);
-  assert.equal(out.channels.length, 2);
-  assert.equal(out.channels[0].id, 'UCabc123');
-  assert.equal(out.channels[0].name, 'Test Conference');
-  assert.equal(out.channels[1].name, 'Other Conf');
+  assert.deepEqual(Object.keys(out).sort(), ['talks']);
   assert.equal(out.talks.length, 4);
 });

@@ -48,8 +48,8 @@ export function parseFeed(xml) {
     if (altHref.includes('/shorts/')) continue; // drop Shorts
     talks.push({
       id,
-      title: title || '',
-      channel: channelName,
+      title: title ? unescapeHtml(title) : '',
+      channel: unescapeHtml(channelName),
       published: published || '',
       thumbnail_url: thumb || `https://i.ytimg.com/vi/${id}/hqdefault.jpg`,
     });
@@ -65,49 +65,24 @@ export function parseFeed(xml) {
  * @param {{feeds: Array<{channelId: string, xml: string}>}} args
  */
 export function build({ feeds }) {
-  const channels = [];
   const talks = [];
-  for (const { channelId, xml } of feeds) {
-    const parsed = parseFeed(xml);
-    if (!parsed.channel.id) parsed.channel.id = channelId;
-    channels.push(parsed.channel);
-    for (const t of parsed.talks) talks.push(t);
+  for (const { xml } of feeds) {
+    for (const t of parseFeed(xml).talks) talks.push(t);
   }
-  return {
-    generated_at: new Date().toISOString(),
-    channels,
-    talks,
-  };
+  return { talks };
 }
 
-function fetchText(url) {
-  return new Promise((resolve, reject) => {
-    https.get(url, { headers: { 'User-Agent': 'dvr-build/1.0' } }, (res) => {
-      if (res.statusCode && (res.statusCode < 200 || res.statusCode >= 300)) {
-        res.resume();
-        reject(new Error(`HTTP ${res.statusCode} for ${url}`));
-        return;
-      }
-      let data = '';
-      res.setEncoding('utf8');
-      res.on('data', (chunk) => (data += chunk));
-      res.on('end', () => resolve(data));
-    }).on('error', reject);
-  });
-}
-
-function readAllowlist(path) {
-  return fs.readFile(path, 'utf8').then((text) =>
-    text
-      .split('\n')
-      .map((l) => l.trim())
-      .filter((l) => l && !l.startsWith('#'))
-      // strip an inline "# comment" suffix
-      .map((l) => l.split(/\s+#/)[0].trim())
-      // each line should be a single channel id token
-      .map((l) => l.split(/\s+/)[0])
-      .filter((l) => /^UC[A-Za-z0-9_-]{20,22}$/.test(l)),
-  );
+// Decode the small set of HTML entities YouTube emits in <title> text.
+// Covers the named entities and the decimal form (e.g. &#39;). We do
+// not need a full HTML decoder; titles never contain tags.
+function unescapeHtml(s) {
+  return s
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&apos;/g, "'")
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&amp;/g, '&');
 }
 
 async function main() {
@@ -116,13 +91,33 @@ async function main() {
     console.error('Usage: node scripts/build-catalog.mjs <allowlist> <out.json>');
     process.exit(2);
   }
-  const ids = await readAllowlist(allowlistPath);
+  const text = await fs.readFile(allowlistPath, 'utf8');
+  const ids = text
+    .split('\n')
+    .map((l) => l.trim())
+    .filter((l) => l && !l.startsWith('#'))
+    .map((l) => l.split(/\s+#/)[0].trim().split(/\s+/)[0])
+    .filter((l) => /^UC[A-Za-z0-9_-]{20,22}$/.test(l));
   const feeds = [];
   for (const id of ids) {
     const url = `https://www.youtube.com/feeds/videos.xml?channel_id=${id}`;
     process.stderr.write(`fetching ${id} ... `);
     try {
-      const xml = await fetchText(url);
+      const xml = await new Promise((resolve, reject) => {
+        https
+          .get(url, { headers: { 'User-Agent': 'dvr-build/1.0' } }, (res) => {
+            if (res.statusCode && (res.statusCode < 200 || res.statusCode >= 300)) {
+              res.resume();
+              reject(new Error(`HTTP ${res.statusCode} for ${url}`));
+              return;
+            }
+            let data = '';
+            res.setEncoding('utf8');
+            res.on('data', (c) => (data += c));
+            res.on('end', () => resolve(data));
+          })
+          .on('error', reject);
+      });
       feeds.push({ channelId: id, xml });
       const n = (xml.match(/<entry>/g) || []).length;
       process.stderr.write(`ok (${n} entries)\n`);
@@ -132,9 +127,7 @@ async function main() {
   }
   const catalog = build({ feeds });
   await fs.writeFile(outPath, JSON.stringify(catalog, null, 2) + '\n');
-  process.stderr.write(
-    `wrote ${outPath}: ${catalog.channels.length} channels, ${catalog.talks.length} talks\n`,
-  );
+  process.stderr.write(`wrote ${outPath}: ${catalog.talks.length} talks\n`);
 }
 
 // Run main() only when invoked directly (not when imported by tests).
