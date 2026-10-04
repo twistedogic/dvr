@@ -29,8 +29,8 @@
 
 ## 5. Commit and push
 
-- [ ] 5.1 Commit the changes with a clear message naming the audit and the cuts
-- [ ] 5.2 Push to `origin main` and verify the CI pipeline goes green
+- [x] 5.1 Commit the changes with a clear message naming the audit and the cuts
+- [x] 5.2 Push to `origin main` and verify the CI pipeline goes green (run 37174955859: test ✓, deploy ✓)
 
 ## Notes
 
