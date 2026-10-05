@@ -94,6 +94,14 @@ function renderPlaying(talk) {
   frame.id = 'player-frame';
   root.appendChild(frame);
 
+  // Fullscreen on entry. Valid only because renderPlaying runs inside the
+  // Play / Browse click (user gesture); on reload-resume there is no
+  // gesture and the request rejects, leaving inline playback. iPhone has
+  // no element fullscreen - it rejects too, and the player's own fs
+  // button (fs: 1) is the fallback. Removing the frame on ENDED exits
+  // fullscreen automatically.
+  if (frame.requestFullscreen) frame.requestFullscreen().catch(() => {});
+
   const state = readState();
   // Resume by fraction: the player reports its own duration at runtime,
   // so no catalog duration field is needed (design D3).

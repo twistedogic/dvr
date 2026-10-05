@@ -79,6 +79,10 @@ a.browse:hover { color: var(--fg); }
   border-radius: 8px;
   overflow: hidden;
 }
+#player-frame:fullscreen {
+  aspect-ratio: auto;
+  border-radius: 0;
+}
 #player-frame iframe {
   position: absolute;
   inset: 0;

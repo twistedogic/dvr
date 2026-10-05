@@ -4,7 +4,7 @@
 
 // Bump CACHE whenever a SHELL file's content changes, so returning users
 // receive the updated shell instead of their frozen first-visit copy.
-const CACHE = 'dvr-v3';
+const CACHE = 'dvr-v4';
 const SHELL = [
   './',
   'index.html',
