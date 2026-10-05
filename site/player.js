@@ -56,7 +56,7 @@ export function loadTalk({ videoId, container, onEnded, resumeFraction = 0 }) {
         iv_load_policy: 3,
         disablekb: 1,
         playsinline: 1,
-        fs: 0,
+        fs: 1,
         cc_load_policy: 0,
       },
       events: {
